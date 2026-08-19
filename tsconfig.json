@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+
+    // Solo para las pruebas, que leen el volcado real desde disco. Los dos
+    // tsconfig de emisión lo anulan: el código publicado no ve Node.
+    "types": ["node"]
+  },
+  "include": ["src", "scripts"]
+}
