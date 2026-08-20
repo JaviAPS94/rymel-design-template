@@ -65,6 +65,45 @@ cuando alguien abra el diseño.
 Al guardar se le retira el `=` inicial que las plantillas antiguas le
 anteponen, que es la forma que el renderizador espera de primera mano.
 
+## Decimales escritos con coma
+
+Las plantillas se escriben a mano y quien las escribe teclea `3,36`. El motor
+no lo entiende: para él es texto.
+
+Lo que hacía el evaluador anterior era peor que no entenderlo — usaba
+`parseFloat`, que **trunca en la coma**:
+
+| Escrito | Evaluador anterior | Motor actual | Normalizado |
+|---|---|---|---|
+| `3,36` | `3` | `"3,36"` (texto) | `3.36` |
+| `16,708` | `16` | `"16,708"` | `16.708` |
+| `0,022` | `0` | `"0,022"` | `0.022` |
+
+En la única plantilla completa que existe hay **1200 celdas así**, y 641
+quedaron guardadas como cero.
+
+```ts
+findDecimalCommaCells(plantilla);   // qué cambiaría, y cuáles son ambiguas
+normalizeDecimalCommas(plantilla);  // el documento convertido
+normalizeDecimalComma("3,36");      // "3.36"
+```
+
+**La conversión nunca ocurre sola.** No se aplica al leer ni al guardar: la
+pide el editor. Reescribir en silencio el contenido de una plantilla al
+serializarla sería el tipo de cambio invisible que este contrato existe para
+impedir.
+
+La regla es estrecha a propósito: solo un literal que es un número con coma y
+nada más. No toca fórmulas (`=SUMA(1,2)`), ni texto con coma
+(`Aislamiento (0,25 mm)`, `M0 0,75`), ni directivas de gráfico, ni notación de
+miles (`1.234,56`), que exigiría otra decisión.
+
+Un caso queda señalado como **ambiguo**: la coma seguida de exactamente tres
+cifras, `16,708`, que podría leerse como separador de miles. En los datos
+reales gana la lectura decimal —hay celdas como `0,012`, ninguna cifra lleva
+dos comas y el mismo documento escribe `115.2` con punto—, pero quien
+normalice merece verlo señalado antes de aceptarlo.
+
 ## Qué normaliza al guardar
 
 - **Descarta las celdas sin contenido.** El formato cuenta como contenido: los
