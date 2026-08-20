@@ -12,8 +12,9 @@ import {
   canRetireDeprecatedFields,
   DEPRECATED_FIELDS,
   deprecatedFieldsReadBy,
+  RETIRED_FIELDS,
 } from "./deprecated.js";
-import { writeSheet, writeTemplate } from "./serialize.js";
+import { readSheet, writeSheet, writeTemplate } from "./serialize.js";
 import { emptySheetStyles, TemplateStatus, TemplateType } from "./types.js";
 import type { TemplateDocument } from "./types.js";
 
@@ -44,7 +45,14 @@ const document = (): TemplateDocument => ({
 });
 
 describe("declaración de los campos espejo", () => {
-  it("cada uno dice de qué canónico es copia y quién lo lee", () => {
+  it("no queda ninguno vivo", () => {
+    expect(DEPRECATED_FIELDS).toEqual([]);
+    expect(canRetireDeprecatedFields()).toBe(true);
+    expect(deprecatedFieldsReadBy("project-front")).toEqual([]);
+  });
+
+  it("cada uno que se añada tendrá que decir de qué es copia y quién lo lee", () => {
+    // La lista está vacía; esto protege el día que alguien la vuelva a llenar.
     for (const field of DEPRECATED_FIELDS) {
       expect(field.canonical, field.field).not.toBe("");
       expect(field.readBy.length, field.field).toBeGreaterThan(0);
@@ -52,16 +60,16 @@ describe("declaración de los campos espejo", () => {
     }
   });
 
-  it("hoy los mantiene vivos project-front", () => {
-    expect(deprecatedFieldsReadBy("project-front").length).toBe(
-      DEPRECATED_FIELDS.length,
-    );
-    expect(deprecatedFieldsReadBy("project-admin")).toEqual([]);
-    expect(deprecatedFieldsReadBy("project-back")).toEqual([]);
-  });
-
-  it("todavía no se pueden retirar", () => {
-    expect(canRetireDeprecatedFields()).toBe(false);
+  it("los cuatro retirados constan, con la versión en que se fueron", () => {
+    expect(RETIRED_FIELDS.map((field) => field.field).sort()).toEqual([
+      "catalogSheetId",
+      "templateHiddenColumns",
+      "templateHiddenRows",
+      "value",
+    ]);
+    for (const field of RETIRED_FIELDS) {
+      expect(field.retiredIn, field.field).toBe("2.0.0");
+    }
   });
 });
 
@@ -93,6 +101,36 @@ describe("el serializador escribe lo declarado y solo lo declarado", () => {
     expect(cell.itemLink?.catalogSheetId !== undefined).toBe(
       declared.has("catalogSheetId"),
     );
+  });
+
+  it("los retirados se siguen entendiendo al leer", () => {
+    // Dejar de escribir algo no es dejar de entenderlo: hay plantillas
+    // guardadas que todavía los traen, y una copia antigua tiene que poder
+    // restaurarse.
+    const leida = readSheet(
+      {
+        name: "Antigua",
+        cells: {
+          A1: { value: "=SUMA(B1:B2)" },
+          B5: {
+            value: "",
+            border: "1px solid #000",
+            itemLink: {
+              catalogSheetId: "Tablas",
+              catalogTableId: "ct-1",
+              itemId: "AC-1",
+            },
+          },
+        },
+        cellsStyles: { templateHiddenRows: [4], templateHiddenColumns: [2] },
+      },
+      0,
+    );
+
+    expect(leida.cells.A1!.content).toBe("=SUMA(B1:B2)");
+    expect(leida.styles.hiddenRows).toEqual([4]);
+    expect(leida.styles.hiddenColumns).toEqual([2]);
+    expect(leida.cells.B5!.itemLink?.catalogSheetName).toBe("Tablas");
   });
 
   it("los campos canónicos se escriben siempre, se retire lo que se retire", () => {

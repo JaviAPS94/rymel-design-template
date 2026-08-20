@@ -1,16 +1,20 @@
 /**
- * Los campos espejo, declarados.
+ * Los campos espejo: la lista que se vació.
  *
- * El serializador escribe algunos campos por duplicado para que un consumidor
- * todavía no migrado siga funcionando. Es un puente, no un estado permanente,
- * y la diferencia entre un puente y una deuda olvidada es que el puente tenga
- * escrito quién lo cruza todavía y cuándo se quita.
+ * El serializador escribía cuatro campos por duplicado para que
+ * `project-front` siguiera funcionando mientras no consumiera este contrato.
+ * Era un puente, y la diferencia entre un puente y una deuda olvidada es que
+ * el puente tenga escrito quién lo cruza todavía y cuándo se quita.
  *
- * De ahí que esto sea una declaración y no un comentario: la prueba de
+ * **Se quitó en v2.0.0.** Antes se comprobó que ningún consumidor los leía:
+ * se sirvieron las plantillas sin ellos y tanto la carga del diseñador como
+ * la ida y vuelta completa siguieron pasando, incluidas la fila oculta y el
+ * enlace a ítem, que eran los casos concretos.
+ *
+ * `DEPRECATED_FIELDS` queda vacía a propósito y no se borra: la prueba de
  * `deprecated.spec.ts` comprueba que el serializador escribe **exactamente**
- * los campos declarados aquí. Quitar una entrada obliga a quitar la escritura,
- * y añadir una escritura sin declararla falla. La retirada deja de ser una
- * promesa y pasa a ser una lista que se puede vaciar.
+ * lo declarado aquí. Con la lista vacía, escribir cualquier campo espejo
+ * vuelve a fallar. El guardarraíl sigue puesto después de cruzar el puente.
  */
 
 export interface DeprecatedField {
@@ -25,35 +29,52 @@ export interface DeprecatedField {
 }
 
 /**
- * Campos que se escriben en espejo hoy.
+ * Campos que se escriben en espejo hoy: ninguno.
  *
- * Retirarlos todos es un cambio de **versión mayor** del contrato: una
- * plantilla escrita sin ellos deja de leerse igual en un consumidor antiguo.
+ * Añadir uno es admitir una deuda, y hay que declararlo aquí con quién lo lee
+ * — si no, la prueba falla.
  */
-export const DEPRECATED_FIELDS: readonly DeprecatedField[] = [
+export const DEPRECATED_FIELDS: readonly DeprecatedField[] = [] as const;
+
+export interface RetiredField {
+  field: string;
+  canonical: string;
+  /** Versión del contrato en la que dejó de escribirse. */
+  retiredIn: string;
+  wasReadBy: string[];
+}
+
+/**
+ * Los que ya se retiraron.
+ *
+ * **Se siguen aceptando al leer.** Dejar de escribirlos no es lo mismo que
+ * dejar de entenderlos: hay plantillas guardadas que todavía los traen, y una
+ * copia de seguridad antigua tiene que poder restaurarse.
+ */
+export const RETIRED_FIELDS: readonly RetiredField[] = [
   {
     field: "templateHiddenRows",
     canonical: "hiddenRows",
-    readBy: ["project-front"],
-    where: "SpreadSheet.tsx, estado en memoria de la hoja (`Sheet`)",
+    retiredIn: "2.0.0",
+    wasReadBy: ["project-front"],
   },
   {
     field: "templateHiddenColumns",
     canonical: "hiddenColumns",
-    readBy: ["project-front"],
-    where: "SpreadSheet.tsx, estado en memoria de la hoja (`Sheet`)",
+    retiredIn: "2.0.0",
+    wasReadBy: ["project-front"],
   },
   {
     field: "value",
     canonical: "formula",
-    readBy: ["project-front"],
-    where: "SpreadSheetCell.tsx, detección de las celdas de gráfico",
+    retiredIn: "2.0.0",
+    wasReadBy: ["project-front"],
   },
   {
     field: "catalogSheetId",
     canonical: "catalogSheetName",
-    readBy: ["project-front"],
-    where: "el enlace de una celda a un ítem de catálogo",
+    retiredIn: "2.0.0",
+    wasReadBy: ["project-front"],
   },
 ] as const;
 
@@ -65,7 +86,8 @@ export const deprecatedFieldsReadBy = (
 
 /**
  * `true` si ya no queda ningún consumidor que lea campos espejo, es decir, si
- * se pueden retirar.
+ * se pueden retirar. Con la lista vacía lo es, y así se queda salvo que
+ * alguien vuelva a añadir un puente.
  */
 export const canRetireDeprecatedFields = (): boolean =>
   DEPRECATED_FIELDS.every((field) => field.readBy.length === 0);

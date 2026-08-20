@@ -9,6 +9,12 @@
  * Al escribir se normaliza además: se descartan las celdas que no tienen nada
  * dentro —975 de las 3013 de la plantilla real, un 32 %— y no se persiste
  * ningún valor calculado.
+ *
+ * **Se escribe solo la forma canónica; se lee cualquiera de las dos.** Los
+ * campos espejo que existieron para `project-front` se retiraron en v2.0.0,
+ * pero se siguen aceptando al leer: hay plantillas guardadas que los traen, y
+ * una copia de seguridad antigua tiene que poder restaurarse. Dejar de
+ * escribir algo no es lo mismo que dejar de entenderlo.
  */
 
 import { CONTRACT_VERSION } from "./version.js";
@@ -215,12 +221,9 @@ export const readTemplate = (template: PersistedTemplate): TemplateDocument => {
 };
 
 const writeCell = (cell: TemplateCell): PersistedCell => {
-  const persisted: PersistedCell = {
-    formula: cell.content,
-    // Espejo obsoleto: el renderizador de project-front todavía busca las
-    // celdas de gráfico en `value`. Se retira cuando adopte el contrato.
-    value: cell.content,
-  };
+  // Solo `formula`. El espejo `value` se retiró en v2.0.0, comprobado antes
+  // de quitarlo que ningún consumidor lo leía.
+  const persisted: PersistedCell = { formula: cell.content };
 
   const format = cell.format ?? {};
   if (format.bold !== undefined) persisted.bold = format.bold;
@@ -247,8 +250,6 @@ const writeCell = (cell: TemplateCell): PersistedCell => {
   if (cell.itemLink !== undefined) {
     persisted.itemLink = {
       catalogSheetName: cell.itemLink.catalogSheetName,
-      // Espejo obsoleto, por la misma razón que `value`.
-      catalogSheetId: cell.itemLink.catalogSheetName,
       catalogTableId: cell.itemLink.catalogTableId,
       itemId: cell.itemLink.itemId,
     };
@@ -269,9 +270,6 @@ const writeStyles = (styles: SheetStyles): PersistedSheetStyles => ({
   rowHeights: { ...styles.rowHeights },
   hiddenRows: [...styles.hiddenRows],
   hiddenColumns: [...styles.hiddenColumns],
-  // Espejo obsoleto: `loadTemplate` en project-front todavía lee estos.
-  templateHiddenRows: [...styles.hiddenRows],
-  templateHiddenColumns: [...styles.hiddenColumns],
   freezeRow: styles.freezeRow,
   freezeColumn: styles.freezeColumn,
   mergedCells: styles.mergedCells.map((merged) => ({ ...merged })),

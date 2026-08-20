@@ -167,7 +167,9 @@ describe("filas y columnas ocultas", () => {
     expect(hoja.styles.hiddenRows).toEqual([1, 2]);
   });
 
-  it("escribe los dos nombres, para que project-front siga leyéndolas", () => {
+  it("escribe solo el nombre canónico", () => {
+    // El espejo `templateHiddenRows` se retiró en v2.0.0, comprobado antes de
+    // quitarlo que ningún consumidor lo leía.
     const hoja = writeSheet({
       name: "Hoja1",
       position: 0,
@@ -176,9 +178,9 @@ describe("filas y columnas ocultas", () => {
     });
 
     expect(hoja.cellsStyles!.hiddenRows).toEqual([4]);
-    expect(hoja.cellsStyles!.templateHiddenRows).toEqual([4]);
     expect(hoja.cellsStyles!.hiddenColumns).toEqual([8]);
-    expect(hoja.cellsStyles!.templateHiddenColumns).toEqual([8]);
+    expect(hoja.cellsStyles!.templateHiddenRows).toBeUndefined();
+    expect(hoja.cellsStyles!.templateHiddenColumns).toBeUndefined();
   });
 
   it("sobrevive a una ida y vuelta completa", () => {
@@ -223,12 +225,13 @@ describe("ida y vuelta de la plantilla real", () => {
     expect(escrita.contractVersion).toBe(CONTRACT_VERSION);
   });
 
-  it("espeja el contenido en `value`, que project-front todavía lee", () => {
+  it("escribe el contenido en un solo campo", () => {
     const escrita = writeTemplate(readTemplate(plantillaReal()));
     const k73 = escrita.sheets![0]!.cells.K73!;
 
-    expect(k73.value).toBe(k73.formula);
     expect(k73.formula!.startsWith("DRAW:BOBINADO:")).toBe(true);
+    // `value` era el espejo de `formula`; se retiró en v2.0.0.
+    expect(k73.value).toBeUndefined();
   });
 
   it("no vuelve a escribir ningún valor calculado", () => {

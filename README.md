@@ -113,34 +113,31 @@ normalice merece verlo señalado antes de aceptarlo.
 - **Reasigna las posiciones de las hojas**, consecutivas y sin huecos. En la
   base, las dos hojas de la plantilla real valen ambas 0.
 
-## Compatibilidad con project-front
+## Campos espejo: el puente que ya se cruzó
 
-El serializador escribe algunos campos **en espejo** para que un consumidor
-todavía no migrado siga funcionando sin coordinar despliegues entre
-repositorios. No son un comentario en un documento: están **declarados en el
-código**, en `DEPRECATED_FIELDS`.
+Hasta v1.2.0 el serializador escribía cuatro campos por duplicado para que
+`project-front` siguiera funcionando mientras no consumiera este contrato:
+`templateHiddenRows`, `templateHiddenColumns`, `value` y `catalogSheetId`.
+
+**Se retiraron en v2.0.0**, después de comprobarlo y no de suponerlo: se
+sirvieron las plantillas sin ellos y tanto la carga del diseñador como la ida y
+vuelta completa siguieron pasando, incluidas la fila oculta y el enlace a ítem,
+que eran los casos concretos.
+
+**Se siguen aceptando al leer.** Dejar de escribir algo no es lo mismo que
+dejar de entenderlo: hay plantillas guardadas que todavía los traen, y una
+copia de seguridad antigua tiene que poder restaurarse.
 
 ```ts
-import { DEPRECATED_FIELDS, deprecatedFieldsReadBy, canRetireDeprecatedFields }
-  from "@rymel/design-template";
-
-deprecatedFieldsReadBy("project-front"); // los que mantiene vivos
-canRetireDeprecatedFields();             // false mientras quede alguno
+DEPRECATED_FIELDS;              // [] — ninguno vivo
+canRetireDeprecatedFields();    // true
+RETIRED_FIELDS;                 // los cuatro, con la versión en que se fueron
 ```
 
-| Canónico | Espejo obsoleto | Quién lo lee |
-|---|---|---|
-| `hiddenRows` / `hiddenColumns` | `templateHiddenRows` / `templateHiddenColumns` | `project-front`, estado en memoria de la hoja |
-| `formula` | `value` | `project-front`, detección de las celdas de gráfico |
-| `catalogSheetName` | `catalogSheetId` | `project-front`, enlace de celda a ítem |
-
-**La declaración y el serializador no pueden divergir.** `deprecated.spec.ts`
-comprueba que se escribe exactamente lo declarado: quitar una entrada obliga a
-quitar la escritura, y escribir un campo sin declararlo falla. Así la retirada
-deja de ser una promesa y pasa a ser una lista que se puede vaciar.
-
-Retirarlos todos es un cambio de **versión mayor**: una plantilla escrita sin
-ellos deja de leerse igual en un consumidor antiguo.
+La lista vacía no es decorativa: `deprecated.spec.ts` comprueba que se escribe
+**exactamente** lo declarado. Con la lista vacía, escribir cualquier campo
+espejo falla. El guardarraíl sigue puesto después de cruzar el puente, y añadir
+uno nuevo obliga a declararlo con quién lo lee.
 
 ## Validación
 
