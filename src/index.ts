@@ -2,6 +2,7 @@ export * from "./version.js";
 export * from "./types.js";
 export * from "./persisted.js";
 export * from "./diagnostics.js";
+export * from "./deprecated.js";
 export * from "./graphic.js";
 export * from "./book.js";
 export * from "./serialize.js";

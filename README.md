@@ -76,16 +76,32 @@ anteponen, que es la forma que el renderizador espera de primera mano.
 
 ## Compatibilidad con project-front
 
-Mientras `project-front` no adopte este contrato, el serializador escribe dos
-campos obsoletos **en espejo**, para que su lector actual siga funcionando sin
-coordinar despliegues entre repositorios:
+El serializador escribe algunos campos **en espejo** para que un consumidor
+todavía no migrado siga funcionando sin coordinar despliegues entre
+repositorios. No son un comentario en un documento: están **declarados en el
+código**, en `DEPRECATED_FIELDS`.
+
+```ts
+import { DEPRECATED_FIELDS, deprecatedFieldsReadBy, canRetireDeprecatedFields }
+  from "@rymel/design-template";
+
+deprecatedFieldsReadBy("project-front"); // los que mantiene vivos
+canRetireDeprecatedFields();             // false mientras quede alguno
+```
 
 | Canónico | Espejo obsoleto | Quién lo lee |
 |---|---|---|
-| `hiddenRows` / `hiddenColumns` | `templateHiddenRows` / `templateHiddenColumns` | `loadTemplate` |
-| `formula` | `value` | la detección de celdas de gráfico en `SpreadSheetCell` |
+| `hiddenRows` / `hiddenColumns` | `templateHiddenRows` / `templateHiddenColumns` | `project-front`, estado en memoria de la hoja |
+| `formula` | `value` | `project-front`, detección de las celdas de gráfico |
+| `catalogSheetName` | `catalogSheetId` | `project-front`, enlace de celda a ítem |
 
-Se retiran cuando `project-front` consuma el paquete.
+**La declaración y el serializador no pueden divergir.** `deprecated.spec.ts`
+comprueba que se escribe exactamente lo declarado: quitar una entrada obliga a
+quitar la escritura, y escribir un campo sin declararlo falla. Así la retirada
+deja de ser una promesa y pasa a ser una lista que se puede vaciar.
+
+Retirarlos todos es un cambio de **versión mayor**: una plantilla escrita sin
+ellos deja de leerse igual en un consumidor antiguo.
 
 ## Validación
 
@@ -122,8 +138,22 @@ hoja en un bucle.
    fijando cada uno su propio tag, que un consumidor reciba una plantilla
    escrita con una versión posterior a la suya no es una hipótesis.
 
-Sube de versión mayor cualquier cambio en la forma persistida que haga que una
-plantilla válida deje de leerse igual.
+## Versionado
+
+**La forma persistida es el contrato.** Sube de versión **mayor** cualquier
+cambio que haga que una plantilla válida deje de leerse igual:
+
+- retirar un campo, espejo o no;
+- renombrar un campo, o cambiar su tipo;
+- cambiar qué se descarta al normalizar, o qué se considera contenido;
+- cambiar la forma en que se resuelve una ambigüedad entre dos campos.
+
+Sube de versión **menor** lo que solo añade: un campo opcional, una regla de
+validación nueva, una función exportada.
+
+El criterio no es si el código compila en el consumidor, sino si una plantilla
+guardada sigue significando lo mismo. Un cambio que compila en los tres
+repositorios y hace que una celda deje de leerse es mayor.
 
 ## Desarrollo
 
