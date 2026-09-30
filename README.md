@@ -147,9 +147,20 @@ petición de red por cada función de diseño que la plantilla invoque.
 
 Comprueba nombres de hoja únicos, referencias bien formadas, regiones dentro
 de la hoja, zonas de semielaborado sin solapes, desplazamientos de las tablas
-de catálogo, enlaces a ítems que existen, directivas de gráfico, y —apoyándose
-en `analyzeSheet` del motor— sintaxis, hojas inexistentes, funciones
-desconocidas, aridad y ciclos.
+de catálogo, enlaces a ítems que existen —la tabla y, si su columna de
+identificador no se calcula, también el ítem—, una sola celda MO y una sola MD
+en toda la plantilla, zonas de solo lectura sin desplegables dentro,
+directivas de gráfico, y —apoyándose en `analyzeSheet` del motor— sintaxis,
+hojas inexistentes, funciones desconocidas, aridad y ciclos.
+
+## Zonas de solo lectura
+
+`readOnlyZones` declara rangos que el diseñador no puede modificar; al autor
+no le restringen nada. `isReadOnly(hoja, ref)` es la única regla con la que el
+editor las señala, el diseñador las cumple y el servidor las comprueba. Es
+estructural: le basta `{ readOnlyZones, mergedCells }`, así que acepta los
+estilos canónicos, la hoja runtime del diseñador y los estilos guardados sin
+convertir. Una celda combinada está protegida entera si lo está su origen.
 
 Cada problema es un `TemplateDiagnostic` con su hoja, su celda o región, y un
 motivo escrito para quien está creando la plantilla.

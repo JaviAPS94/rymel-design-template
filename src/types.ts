@@ -122,6 +122,20 @@ export interface ItemCatalogTable {
   umColumnOffset: number;
 }
 
+/**
+ * Región que el diseñador no puede modificar.
+ *
+ * Restringe a quien usa la plantilla, no a quien la escribe: en el editor de
+ * plantillas estas celdas se editan como cualquier otra. Se declara por
+ * rangos, igual que las demás regiones, porque así se piensa una tabla de
+ * referencia o un bloque de cálculo.
+ */
+export interface ReadOnlyZone {
+  id: string;
+  startCell: string;
+  endCell: string;
+}
+
 export interface MergedCell {
   startCell: string;
   endCell: string;
@@ -150,6 +164,7 @@ export interface SheetStyles {
   namedRanges: NamedRange[];
   semiFinishedZones: SemiFinishedZone[];
   itemCatalogTables: ItemCatalogTable[];
+  readOnlyZones: ReadOnlyZone[];
 }
 
 /**
@@ -215,4 +230,5 @@ export const emptySheetStyles = (): SheetStyles => ({
   namedRanges: [],
   semiFinishedZones: [],
   itemCatalogTables: [],
+  readOnlyZones: [],
 });

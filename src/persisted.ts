@@ -115,6 +115,11 @@ export interface PersistedSheetStyles {
     descriptionColumnOffset: number;
     umColumnOffset: number;
   }[];
+  readOnlyZones?: {
+    id: string;
+    startCell: string;
+    endCell: string;
+  }[];
 }
 
 /** Una hoja tal como viaja por la API, con sus JSON ya interpretados. */

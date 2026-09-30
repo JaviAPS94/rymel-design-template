@@ -252,3 +252,23 @@ describe("ida y vuelta de la plantilla real", () => {
     expect(plantilla.version).toBe(0);
   });
 });
+
+describe("zonas de solo lectura", () => {
+  it("una hoja guardada antes del campo se lee sin zonas", () => {
+    const sheet = readSheet({ name: "Resumen", cells: {}, cellsStyles: {} } as PersistedSheet, 0);
+    expect(sheet.styles.readOnlyZones).toEqual([]);
+  });
+
+  it("conserva las zonas en la ida y vuelta", () => {
+    const zonas = [
+      { id: "ro-1", startCell: "B3", endCell: "C10" },
+      { id: "ro-2", startCell: "F1", endCell: "F1" },
+    ];
+    const sheet = readSheet(
+      { name: "Tablas", cells: {}, cellsStyles: { readOnlyZones: zonas } } as PersistedSheet,
+      0,
+    );
+    const again = readSheet(writeSheet(sheet), 0);
+    expect(again.styles.readOnlyZones).toEqual(zonas);
+  });
+});

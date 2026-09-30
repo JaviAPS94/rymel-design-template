@@ -218,6 +218,13 @@ describe("regiones", () => {
 describe("enlaces de celda", () => {
   const conCatalogo = (): TemplateSheet =>
     hoja("Tablas", {
+      cells: {
+        A1: { content: "ID" },
+        B1: { content: "Descripción" },
+        A2: { content: "AC-1" },
+        B2: { content: "Acero 1 mm" },
+        A3: { content: "AC-2" },
+      },
       styles: {
         ...emptySheetStyles(),
         itemCatalogTables: [
@@ -439,5 +446,152 @@ describe("la plantilla real", () => {
     // celda de gráfico. Si el validador las marcara, el editor rechazaría la
     // única plantilla completa que existe.
     expect(validateTemplate(readTemplate(plantillaReal()))).toEqual([]);
+  });
+});
+
+describe("ítem enlazado", () => {
+  const tabla = (cells: Record<string, { content: string }>): TemplateSheet =>
+    hoja("Tablas", {
+      cells,
+      styles: {
+        ...emptySheetStyles(),
+        itemCatalogTables: [
+          {
+            id: "tbl-al",
+            name: "Aluminio",
+            startCell: "A1",
+            endCell: "C10",
+            headerRows: 1,
+            idColumnOffset: 0,
+            descriptionColumnOffset: 1,
+            umColumnOffset: 2,
+          },
+        ],
+      },
+    });
+
+  const enlace = (itemId: string): TemplateSheet =>
+    hoja("Resumen", {
+      cells: {
+        B7: {
+          content: "3",
+          itemLink: { catalogSheetName: "Tablas", catalogTableId: "tbl-al", itemId },
+        },
+      },
+    });
+
+  it("acepta un ítem que está en las filas de datos", () => {
+    expect(
+      codigos(plantilla([enlace("AL-003"), tabla({ A1: { content: "ID" }, A4: { content: "AL-003" } })])),
+    ).toEqual([]);
+  });
+
+  it("rechaza un ítem que no existe, nombrando tabla e identificador", () => {
+    const diagnosticos = validateTemplate(
+      plantilla([enlace("AL-999"), tabla({ A1: { content: "ID" }, A2: { content: "AL-001" } })]),
+    );
+
+    expect(diagnosticos).toHaveLength(1);
+    expect(diagnosticos[0]).toMatchObject({
+      sheet: "Resumen",
+      cell: "B7",
+      code: "missing-catalog-item",
+    });
+    expect(diagnosticos[0]!.message).toContain("AL-999");
+    expect(diagnosticos[0]!.message).toContain("Aluminio");
+  });
+
+  it("no cuenta las filas de encabezado como ítems", () => {
+    expect(codigos(plantilla([enlace("ID"), tabla({ A1: { content: "ID" } })]))).toEqual([
+      "missing-catalog-item",
+    ]);
+  });
+
+  it("no juzga una tabla cuyos identificadores se calculan", () => {
+    // El análisis no evalúa: sin saber qué da la fórmula, marcarlo sería un
+    // falso positivo que bloquearía la publicación.
+    expect(
+      codigos(
+        plantilla([enlace("AL-999"), tabla({ A1: { content: "ID" }, A2: { content: '="AL-"&B2' } })]),
+      ),
+    ).toEqual([]);
+  });
+
+  it("rechaza un vínculo sin ítem", () => {
+    expect(codigos(plantilla([enlace("  "), tabla({ A2: { content: "AL-001" } })]))).toEqual([
+      "missing-catalog-item",
+    ]);
+  });
+});
+
+describe("etiqueta de material", () => {
+  it("rechaza dos MO en hojas distintas y cada una nombra a la otra", () => {
+    const diagnosticos = validateTemplate(
+      plantilla([
+        hoja("Resumen", { cells: { D3: { content: "5", materialTag: "MO" } } }),
+        hoja("Tablas", { cells: { B5: { content: "7", materialTag: "MO" } } }),
+      ]),
+    );
+
+    expect(diagnosticos.map((d) => [d.sheet, d.cell, d.code])).toEqual([
+      ["Resumen", "D3", "duplicate-material-tag"],
+      ["Tablas", "B5", "duplicate-material-tag"],
+    ]);
+    expect(diagnosticos[0]!.message).toContain("Tablas!B5");
+    expect(diagnosticos[1]!.message).toContain("Resumen!D3");
+  });
+
+  it("acepta una MO y una MD", () => {
+    expect(
+      codigos(
+        plantilla([
+          hoja("Resumen", {
+            cells: {
+              D3: { content: "5", materialTag: "MO" },
+              D4: { content: "4", materialTag: "MD" },
+            },
+          }),
+        ]),
+      ),
+    ).toEqual([]);
+  });
+});
+
+describe("zonas de solo lectura", () => {
+  const conZona = (overrides: Partial<TemplateSheet> = {}, zona = { startCell: "B3", endCell: "C10" }) =>
+    hoja("Tablas", {
+      ...overrides,
+      styles: { ...emptySheetStyles(), readOnlyZones: [{ id: "ro-1", ...zona }] },
+    });
+
+  it("acepta una zona dentro de la hoja", () => {
+    expect(codigos(plantilla([conZona()]))).toEqual([]);
+  });
+
+  it("rechaza una zona que se sale de la hoja", () => {
+    expect(codigos(plantilla([conZona({}, { startCell: "A1", endCell: "A300" })]))).toEqual([
+      "region-out-of-sheet",
+    ]);
+  });
+
+  it("rechaza un desplegable protegido", () => {
+    const diagnosticos = validateTemplate(
+      plantilla([conZona({ cells: { C5: { content: "Aluminio", options: ["Aluminio", "Cobre"] } } })]),
+    );
+    expect(diagnosticos).toHaveLength(1);
+    expect(diagnosticos[0]).toMatchObject({ cell: "C5", code: "read-only-input" });
+  });
+
+  it("acepta zonas solapadas", () => {
+    const sheet = hoja("Tablas", {
+      styles: {
+        ...emptySheetStyles(),
+        readOnlyZones: [
+          { id: "a", startCell: "A1", endCell: "C3" },
+          { id: "b", startCell: "B2", endCell: "D4" },
+        ],
+      },
+    });
+    expect(codigos(plantilla([sheet]))).toEqual([]);
   });
 });
