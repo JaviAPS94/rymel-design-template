@@ -174,6 +174,12 @@ editar `Tablas!J14` no marca como sucias las celdas de `Resumen` que la
 consultan, que es justo lo que hace hoy `project-front` recalculando hoja por
 hoja en un bucle.
 
+## Rastreo de celdas
+
+`traceCell` dice de qué se alimenta una celda y a quién alimenta, incluso entre hojas, y puede recorrer la cadena completa de entradas. Lo usan el editor de plantillas del administrador y el diseñador del cliente, para que los dos expliquen una celda igual.
+
+No lee una plantilla directamente: recibe una función que devuelve lo escrito en cada celda. `templateCellLookup(plantilla)` es la de una plantilla; el cliente pasa la suya sobre las hojas del diseño. El grafo tiene que ser el del libro entero (`buildGraph(toEngineBook(...))` o equivalente), no uno por hoja: con uno por hoja no se ven los dependientes de otras hojas.
+
 ## Restricciones
 
 1. **Una sola dependencia de runtime, `@rymel/formula-engine`.** Sin React,

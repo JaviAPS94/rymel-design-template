@@ -9,3 +9,4 @@ export * from "./book.js";
 export * from "./serialize.js";
 export * from "./validate.js";
 export * from "./readOnly.js";
+export * from "./trace.js";
