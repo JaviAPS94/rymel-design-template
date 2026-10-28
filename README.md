@@ -188,6 +188,12 @@ No lee una plantilla directamente: recibe una función que devuelve lo escrito e
 
 Las usan el diseñador y el administrador, para que la lista sea una sola. La fijan `bom.spec.ts` y `test/fixtures/bom-cases.json`.
 
+### La base, en la plantilla
+
+`buildBomBaseSheet(estructura, hojas)` genera la hoja «Lista de materiales» de una plantilla: las mismas secciones, pero con la cantidad, la descripción y la unidad de cada ítem como **fórmulas** a la celda vinculada y a su fila del catálogo (`=Hoja1!L50`), para que cada diseño la calcule con sus valores, y con los semielaborados hijos siempre desplegados. La marca `styles.billOfMaterials` (la estructura de origen) dice qué hoja es; `bomBaseSheet(hojas)` la encuentra. La validación no deja publicar dos (`duplicate-bom-sheet`).
+
+`withAccessories(celdas, elemento)` suma a la lista ya calculada los accesorios de la norma, al final de la sección de su semielaborado. Se aplica al mostrar: el elemento es dato del diseño, y la base, de la plantilla. Lo fija `bomBase.spec.ts`, que calcula la base con el motor y la compara con `buildBomSummaryCells`.
+
 ## Restricciones
 
 1. **Una sola dependencia de runtime, `@rymel/formula-engine`.** Sin React,

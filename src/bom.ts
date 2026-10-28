@@ -206,7 +206,8 @@ const buildCatalogResolver = (sheets: Sheet[]) => {
 
 // Una fila de material. Referencia, costos y observación solo los tienen los
 // accesorios de la norma.
-type BomRow = {
+/** Una fila de material: columnas B–I de la lista. */
+export type BomSummaryRow = {
   itemId: string;
   description: string;
   cantidad: string;
@@ -222,6 +223,51 @@ const NO_ERP_FIELDS = { reference: "", averageCost: "", lastCost: "", note: "" }
 /** El valor como texto; vacío si falta. Un 0 es un valor. */
 const present = (value: unknown): string =>
   value === null || value === undefined ? "" : String(value).trim();
+
+/**
+ * Las filas de los accesorios que la norma asigna al semielaborado `sfId`,
+ * con todos sus campos: los que trae del ERP al asignarlo y la cantidad que
+ * le pone la norma. Lo que falta se dice en `note`; no se rellena.
+ */
+export const bomAccessoryRows = (element: BomElement, sfId: number): BomSummaryRow[] => {
+  // `values` llega como arreglo desde el catálogo de elementos y como texto
+  // JSON desde la respuesta de un diseño. Aquí no se sabe de cuál vino.
+  const accEntry = parseElementValues(element.values).find(
+    (v: Record<string, unknown>) => v["key"] === "accesories",
+  );
+  if (!accEntry || !accEntry["value"]) return [];
+  let accessories: Accessory[] = [];
+  try {
+    const raw = accEntry["value"];
+    const parsed = typeof raw === "string" ? JSON.parse(raw) : raw;
+    accessories = Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+  return accessories
+    .filter((acc) => acc.semiFinished?.id === sfId)
+    .map((acc): BomSummaryRow => {
+      const cantidad = present(acc.value);
+      const um = present(acc.unitOfMeasurement) || present(acc.unitMeasurement);
+      const averageCost = present(acc.averageCost);
+      const lastCost = present(acc.lastCost);
+      const missing = [
+        !cantidad && "sin cantidad en la norma",
+        !um && "sin unidad en la norma",
+        (!averageCost || !lastCost) && "sin costos en la norma",
+      ].filter(Boolean);
+      return {
+        itemId: String(acc.id),
+        description: acc.description,
+        cantidad,
+        um,
+        reference: present(acc.reference),
+        averageCost,
+        lastCost,
+        note: missing.join("; "),
+      };
+    });
+};
 
 // Build BOM summary cells from the tree returned by the BOM API.
 // Children are rendered before their parent (post-order DFS) so leaf SFs
@@ -240,7 +286,7 @@ export const buildBomSummaryCells = (
 
   // F–I solo llevan algo en los accesorios; un ítem de la plantilla no tiene
   // esos datos y no deja celdas vacías
-  const writeErpFields = (r: BomRow, extra: Partial<Cell> = {}) => {
+  const writeErpFields = (r: BomSummaryRow, extra: Partial<Cell> = {}) => {
     const values = [r.reference, r.averageCost, r.lastCost, r.note];
     ["F", "G", "H", "I"].forEach((column, index) => {
       if (values[index]) cells[`${column}${row + 1}`] = cell(values[index], extra);
@@ -249,7 +295,7 @@ export const buildBomSummaryCells = (
 
   // Collect item rows for a given SF id (logic unchanged from original)
   const collectItemRows = (sfId: number) => {
-    const itemRows: BomRow[] = [];
+    const itemRows: BomSummaryRow[] = [];
     sheets.forEach((sheet) => {
       (sheet.semiFinishedZones || []).forEach((zone) => {
         if (zone.semiFinishedId !== sfId) return;
@@ -288,49 +334,7 @@ export const buildBomSummaryCells = (
     return itemRows;
   };
 
-  // Collect accessory rows for a given SF id from element.values["accesories"]
-  const collectAccessoryRows = (sfId: number) => {
-    // `values` llega como arreglo desde el catálogo de elementos y como texto
-    // JSON desde la respuesta de un diseño. Aquí no se sabe de cuál vino.
-    const accEntry = parseElementValues(element.values).find(
-      (v: Record<string, unknown>) => v["key"] === "accesories",
-    );
-    if (!accEntry || !accEntry["value"]) return [];
-    let accessories: Accessory[] = [];
-    try {
-      const raw = accEntry["value"];
-      const parsed = typeof raw === "string" ? JSON.parse(raw) : raw;
-      accessories = Array.isArray(parsed) ? parsed : [];
-    } catch {
-      return [];
-    }
-    return accessories
-      .filter((acc) => acc.semiFinished?.id === sfId)
-      .map((acc): BomRow => {
-        // Todos los campos del accesorio: los que trae del ERP al asignarlo
-        // en la norma y la cantidad que le pone la norma. Lo que falta se
-        // dice en Observación; no se rellena.
-        const cantidad = present(acc.value);
-        const um = present(acc.unitOfMeasurement) || present(acc.unitMeasurement);
-        const averageCost = present(acc.averageCost);
-        const lastCost = present(acc.lastCost);
-        const missing = [
-          !cantidad && "sin cantidad en la norma",
-          !um && "sin unidad en la norma",
-          (!averageCost || !lastCost) && "sin costos en la norma",
-        ].filter(Boolean);
-        return {
-          itemId: String(acc.id),
-          description: acc.description,
-          cantidad,
-          um,
-          reference: present(acc.reference),
-          averageCost,
-          lastCost,
-          note: missing.join("; "),
-        };
-      });
-  };
+  const collectAccessoryRows = (sfId: number) => bomAccessoryRows(element, sfId);
 
   // Post-order DFS: collect nodes leaf-first so child sections precede parents
   const collectNodes = (nodes: BomNode[]): BomNode[] => {

@@ -19,6 +19,7 @@ export type DiagnosticCode =
   | "missing-condition-cell"
   | "missing-catalog-item"
   | "duplicate-material-tag"
+  | "duplicate-bom-sheet"
   | "read-only-input"
   | "empty-name"
   // Contenido de una celda

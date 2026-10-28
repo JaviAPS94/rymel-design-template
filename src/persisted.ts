@@ -120,6 +120,11 @@ export interface PersistedSheetStyles {
     startCell: string;
     endCell: string;
   }[];
+  billOfMaterials?: {
+    structureId: number;
+    structureCode: string;
+    structureName: string;
+  };
 }
 
 /** Una hoja tal como viaja por la API, con sus JSON ya interpretados. */

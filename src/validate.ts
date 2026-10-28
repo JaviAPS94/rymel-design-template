@@ -420,6 +420,23 @@ const checkMaterialTags = (
 };
 
 /**
+ * Como mucho una hoja de lista de materiales: la base es una, y el diseño la
+ * toma por su marca.
+ */
+const checkBomSheets = (template: TemplateDocument, diagnostics: TemplateDiagnostic[]): void => {
+  const marked = template.sheets.filter((sheet) => sheet.styles.billOfMaterials !== undefined);
+  if (marked.length < 2) return;
+  for (const sheet of marked) {
+    const others = marked.filter((other) => other !== sheet).map((other) => other.name);
+    diagnostics.push({
+      sheet: sheet.name,
+      code: "duplicate-bom-sheet",
+      message: `También es lista de materiales ${others.join(", ")}: la plantilla solo puede tener una`,
+    });
+  }
+};
+
+/**
  * Zonas de solo lectura dentro de la hoja, y sin desplegables dentro: una
  * lista de opciones protegida ofrece una elección que el diseñador no puede
  * hacer. Pueden solaparse; proteger dos veces una celda no es ambiguo.
@@ -567,6 +584,7 @@ export const validateTemplate = (
   }
 
   checkMaterialTags(template, diagnostics);
+  checkBomSheets(template, diagnostics);
 
   checkFormulas(template, options, diagnostics);
 

@@ -150,6 +150,16 @@ export interface MergedCell {
  * (`userHiddenRows`, `hiddenCells`): eso es estado de quien usa la plantilla,
  * no de la plantilla. Hoy se persiste, siempre vacío, y no significa nada.
  */
+/**
+ * Marca la hoja como la lista de materiales base de la plantilla, generada a
+ * partir de esta estructura BOM. Como mucho una hoja por plantilla.
+ */
+export interface BomSheetMarker {
+  structureId: number;
+  structureCode: string;
+  structureName: string;
+}
+
 export interface SheetStyles {
   /** Ancho por índice de columna, empezando en 0. */
   columnWidths: Record<number, number>;
@@ -165,6 +175,8 @@ export interface SheetStyles {
   semiFinishedZones: SemiFinishedZone[];
   itemCatalogTables: ItemCatalogTable[];
   readOnlyZones: ReadOnlyZone[];
+  /** Solo en la hoja de lista de materiales; ausente en las demás. */
+  billOfMaterials?: BomSheetMarker;
 }
 
 /**
