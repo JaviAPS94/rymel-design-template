@@ -122,6 +122,27 @@ describe("buildBomBaseSheet", () => {
   });
 });
 
+describe("familias de fantasmas en el árbol", () => {
+  // El servidor añade `phantomFamilies` a cada nodo; la lista no las usa
+  const withFamilies = (nodes: BomStructureNode[]): BomStructureNode[] =>
+    nodes.map((node) => ({
+      ...node,
+      phantomFamilies: [{ id: 1, family: { id: 20, name: "F. Emblemas" }, process: { id: 2, name: "EMBLEMADO" }, offered: 22 }],
+      children: withFamilies(node.children),
+    }) as BomStructureNode);
+
+  it("no cambian la hoja base ni la lista generada", () => {
+    const runtime = cases["sub_design 90 · plegado"]!.sheets[0]!;
+    const sheet = asTemplateSheet(runtime);
+    const families = { ...STRUCTURE, nodes: withFamilies(STRUCTURE.nodes) };
+    expect(buildBomBaseSheet(families, [sheet])).toEqual(buildBomBaseSheet(STRUCTURE, [sheet]));
+    const all = new Set(allNodeIds(STRUCTURE.nodes));
+    expect(buildBomSummaryCells(families, all, [runtime], NO_ACCESSORIES)).toEqual(
+      buildBomSummaryCells(STRUCTURE, all, [runtime], NO_ACCESSORIES),
+    );
+  });
+});
+
 describe("evaluateBomBase", () => {
   it("calcula la base con los valores actuales de las hojas del diseño, no con lo guardado", async () => {
     const runtime = cases["sub_design 90 · plegado"]!.sheets[0]!;
