@@ -180,6 +180,14 @@ hoja en un bucle.
 
 No lee una plantilla directamente: recibe una función que devuelve lo escrito en cada celda. `templateCellLookup(plantilla)` es la de una plantilla; el cliente pasa la suya sobre las hojas del diseño. El grafo tiene que ser el del libro entero (`buildGraph(toEngineBook(...))` o equivalente), no uno por hoja: con uno por hoja no se ven los dependientes de otras hojas.
 
+## Lista de materiales
+
+`buildBomSummaryCells(estructura, desplegados, hojas, elemento)` arma la lista de materiales de un diseño como celdas de hoja de cálculo. Junta lo que define la plantilla (ítems vinculados dentro de las zonas de semielaborado, con la descripción y la unidad de su tabla de catálogo) con los accesorios que la norma asigna al elemento, sobre el árbol de la estructura BOM. Columnas: ID, Ítem, Descripción, Cantidad, U.M., Referencia, Costo promedio, Último costo y Observación. Lo que le falta a un accesorio se dice en Observación; no se rellena.
+
+`bomFingerprint(celdas)` es la huella (SHA-256 en hexadecimal) de una lista generada sin editar. El diseñador la guarda con sus ajustes para saber, al volver a abrirlos, si la lista generada cambió. El SHA-256 está escrito en el paquete (`sha256.ts`) porque `crypto.subtle` y `TextEncoder` no son parte de ES2022, y la huella tiene que ser la misma en el navegador y en Node.
+
+Las usan el diseñador y el administrador, para que la lista sea una sola. La fijan `bom.spec.ts` y `test/fixtures/bom-cases.json`.
+
 ## Restricciones
 
 1. **Una sola dependencia de runtime, `@rymel/formula-engine`.** Sin React,
