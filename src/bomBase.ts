@@ -11,7 +11,7 @@
  * fila del catálogo, no valores copiados: la cantidad depende de cada diseño.
  */
 
-import { columnIndexToLabel, parseCellRef } from "@rymel/formula-engine";
+import { columnIndexToLabel, evaluateSheet, parseCellRef } from "@rymel/formula-engine";
 import { emptySheetStyles, type CellFormat, type TemplateCell, type TemplateSheet } from "./types.js";
 import {
   BOM_SUMMARY_COLUMN_WIDTHS,
@@ -170,6 +170,66 @@ export const buildBomBaseSheet = (
       },
     },
   };
+};
+
+// --- Cálculo en el diseño -------------------------------------------------
+
+/** Una celda de una hoja de diseño guardada: fórmula, valor y lo calculado. */
+export interface BomRuntimeCell {
+  value?: unknown;
+  formula?: string;
+  computed?: unknown;
+  bold?: boolean;
+  textColor?: string;
+  backgroundColor?: string;
+}
+
+const shownOf = (cell: BomRuntimeCell): string => {
+  const computed = cell.computed;
+  if (computed !== undefined && computed !== null && computed !== "") return String(computed);
+  return cell.value === undefined || cell.value === null ? "" : String(cell.value);
+};
+
+/**
+ * La hoja base de un diseño, calculada con los valores **actuales** de sus
+ * demás hojas.
+ *
+ * No se fía del `computed` guardado de la base: el diseñador recalcula la hoja
+ * que edita, no las que dependen de ella en otras hojas, y la base no se
+ * edita nunca. Las demás hojas entran con lo que muestran, así que una
+ * fórmula de diseño de esas hojas no se vuelve a evaluar aquí.
+ */
+export const evaluateBomBase = async (
+  base: { name: string; cells: Record<string, BomRuntimeCell | undefined> },
+  sheets: { name: string; cells: Record<string, BomRuntimeCell | undefined> }[],
+): Promise<Record<string, BomSummaryCell>> => {
+  const book: Record<string, { formula: string }> = {};
+  for (const sheet of sheets) {
+    if (sheet.name === base.name) continue;
+    for (const [ref, cell] of Object.entries(sheet.cells)) {
+      if (cell) book[`${sheet.name}!${ref}`] = { formula: shownOf(cell) };
+    }
+  }
+  for (const [ref, cell] of Object.entries(base.cells)) {
+    if (cell) book[`${base.name}!${ref}`] = { formula: cell.formula || shownOf(cell) };
+  }
+  const { values } = await evaluateSheet(book);
+
+  const result: Record<string, BomSummaryCell> = {};
+  for (const [ref, cell] of Object.entries(base.cells)) {
+    if (!cell) continue;
+    const value = values[`${base.name}!${ref}`];
+    const shown = value === undefined || value === null ? "" : String(value);
+    result[ref] = {
+      value: shown,
+      formula: shown,
+      computed: shown,
+      ...(cell.bold ? { bold: true } : {}),
+      ...(cell.textColor ? { textColor: cell.textColor } : {}),
+      ...(cell.backgroundColor ? { backgroundColor: cell.backgroundColor } : {}),
+    };
+  }
+  return result;
 };
 
 // --- Accesorios -----------------------------------------------------------

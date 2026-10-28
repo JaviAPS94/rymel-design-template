@@ -5,6 +5,7 @@ import {
   BOM_BASE_SHEET_NAME,
   bomBaseSheet,
   buildBomBaseSheet,
+  evaluateBomBase,
   withAccessories,
 } from "./bomBase.js";
 import {
@@ -118,6 +119,31 @@ describe("buildBomBaseSheet", () => {
     const read = readSheet(writeSheet(base), 1);
     expect(read.styles.billOfMaterials).toEqual(base.styles.billOfMaterials);
     expect(readSheet(writeSheet(designSheet), 0).styles.billOfMaterials).toBeUndefined();
+  });
+});
+
+describe("evaluateBomBase", () => {
+  it("calcula la base con los valores actuales de las hojas del diseño, no con lo guardado", async () => {
+    const runtime = cases["sub_design 90 · plegado"]!.sheets[0]!;
+    const base = buildBomBaseSheet(STRUCTURE, [asTemplateSheet(runtime)]);
+    // La base guardada en el diseño, como la deja el cliente: fórmula y un
+    // `computed` viejo
+    const savedBase = {
+      name: base.name,
+      cells: Object.fromEntries(
+        Object.entries(base.cells).map(([ref, cell]) => [
+          ref,
+          { value: cell.content, formula: cell.content, computed: cell.content.startsWith("=") ? "viejo" : cell.content, ...(cell.format?.bold ? { bold: true } : {}) },
+        ]),
+      ),
+    };
+    const edited = { ...runtime, cells: { ...runtime.cells, L50: { value: "7", formula: "7", computed: 7 } } };
+    const result = await evaluateBomBase(savedBase, [edited]);
+    const row = Object.entries(result).find(([ref, cell]) => ref.startsWith("B") && cell.value === "240")![0].slice(1);
+    expect(result[`D${row}`]?.value).toBe("7");
+    expect(result[`C${row}`]?.value).toBe("Fibra de 2 mm");
+    expect(Object.values(result).some((cell) => cell.value === "viejo")).toBe(false);
+    expect(Object.values(result).some((cell) => cell.bold)).toBe(true);
   });
 });
 
