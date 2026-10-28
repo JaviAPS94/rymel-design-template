@@ -123,23 +123,64 @@ describe("buildBomBaseSheet", () => {
 });
 
 describe("familias de fantasmas en el árbol", () => {
-  // El servidor añade `phantomFamilies` a cada nodo; la lista no las usa
+  // El servidor añade `phantomFamilies` a cada nodo; aquí, F. Acc Sol bajo la raíz
+  const ROOT_ID = STRUCTURE.nodes[0]!.id;
   const withFamilies = (nodes: BomStructureNode[]): BomStructureNode[] =>
     nodes.map((node) => ({
       ...node,
-      phantomFamilies: [{ id: 1, family: { id: 20, name: "F. Emblemas" }, process: { id: 2, name: "EMBLEMADO" }, offered: 22 }],
+      phantomFamilies:
+        node.id === ROOT_ID
+          ? [{ id: 1, family: { id: 20, name: "F. Acc Sol" }, process: { id: 5, name: "METALMECANICA" } }]
+          : [],
       children: withFamilies(node.children),
-    }) as BomStructureNode);
+    }));
+  const families = { ...STRUCTURE, nodes: withFamilies(STRUCTURE.nodes) };
+  const runtime = cases["sub_design 90 · plegado"]!.sheets[0]!;
+  const sheet = asTemplateSheet(runtime);
+  const rowOf = (cells: Record<string, { content?: string; value?: string }>, text: string) =>
+    Number(Object.entries(cells).find(([ref, c]) => ref.startsWith("B") && (c.content ?? c.value) === text)?.[0].slice(1));
 
-  it("no cambian la hoja base ni la lista generada", () => {
-    const runtime = cases["sub_design 90 · plegado"]!.sheets[0]!;
-    const sheet = asTemplateSheet(runtime);
-    const families = { ...STRUCTURE, nodes: withFamilies(STRUCTURE.nodes) };
-    expect(buildBomBaseSheet(families, [sheet])).toEqual(buildBomBaseSheet(STRUCTURE, [sheet]));
-    const all = new Set(allNodeIds(STRUCTURE.nodes));
-    expect(buildBomSummaryCells(families, all, [runtime], NO_ACCESSORIES)).toEqual(
-      buildBomSummaryCells(STRUCTURE, all, [runtime], NO_ACCESSORIES),
-    );
+  it("la base lleva una fila por familia en la sección de su semielaborado", () => {
+    const base = buildBomBaseSheet(families, [sheet]);
+    const row = rowOf(base.cells, "F. Acc Sol");
+    expect(base.cells[`C${row}`]!.content).toBe("Fantasma : METALMECANICA");
+    expect([base.cells[`D${row}`]!.content, base.cells[`E${row}`]!.content]).toEqual(["1", "UND"]);
+    expect(base.cells[`I${row}`]!.content).toBe("Fantasma por elegir");
+    expect(base.cells[`B${row}`]!.format?.backgroundColor).toBe("#ede9fe");
+    // Después de los semielaborados hijos y antes de los ítems de la raíz
+    const rootTitle = rowOf(base.cells, `Semielaborado : ${STRUCTURE.nodes[0]!.semiFinished.name}`);
+    const childCodes = STRUCTURE.nodes[0]!.children.map((child) => rowOf(base.cells, child.semiFinished.code));
+    expect(row).toBeGreaterThan(rootTitle);
+    childCodes.forEach((childRow) => expect(row).toBeGreaterThan(childRow));
+    expect(base.cells[`B${row + 1}`]?.content).not.toBe("");
+  });
+
+  it("calculada, sigue dando las mismas filas que la lista generada", async () => {
+    const computed = await evaluatedBase(sheet, buildBomBaseSheet(families, [sheet]));
+    const today = buildBomSummaryCells(families, new Set(allNodeIds(STRUCTURE.nodes)), [runtime], NO_ACCESSORIES);
+    expect(Object.values(today).some((c) => c.value === "F. Acc Sol")).toBe(true);
+    for (const [ref, cell] of Object.entries(today)) {
+      if (ref.startsWith("A") && (cell.value === "▼" || cell.value === "▶")) continue;
+      expect(computed[ref]?.value ?? "", ref).toBe(cell.value);
+    }
+  });
+
+  it("los accesorios siguen al final de la sección, tras las familias", () => {
+    // Los accesorios de la norma de prueba son del semielaborado 1
+    const cells: Record<string, BomSummaryCell> = {
+      A1: { value: "1", formula: "1", computed: "1" },
+      B1: { value: "Semielaborado : SF 1", formula: "", computed: "" },
+      B2: { value: "Item", formula: "", computed: "" },
+      B3: { value: "F. Acc Sol", formula: "", computed: "" },
+      B4: { value: "240", formula: "", computed: "" },
+    };
+    const result = withAccessories(cells, cases["accesorios de la norma"]!.element);
+    expect(["B3", "B4", "B5", "B6", "B7"].map((ref) => result[ref]?.value)).toEqual(["F. Acc Sol", "240", "601", "602", "603"]);
+  });
+
+  it("sin familias, todo queda como antes", () => {
+    const empty = { ...STRUCTURE, nodes: STRUCTURE.nodes.map((n) => ({ ...n, phantomFamilies: [] })) };
+    expect(buildBomBaseSheet(empty, [sheet])).toEqual(buildBomBaseSheet(STRUCTURE, [sheet]));
   });
 });
 

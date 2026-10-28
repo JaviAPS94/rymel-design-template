@@ -1,6 +1,6 @@
 {
   "name": "@rymel/design-template",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "Contrato de la plantilla de diseño de Rymel: tipos canónicos, serialización y validación, idénticos en navegador y en Node.",
   "license": "UNLICENSED",
   "private": false,

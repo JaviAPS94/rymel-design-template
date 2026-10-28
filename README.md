@@ -194,6 +194,8 @@ Las usan el diseñador y el administrador, para que la lista sea una sola. La fi
 
 `evaluateBomBase(base, hojas)` calcula la hoja base de un diseño con los valores **actuales** de sus demás hojas: el diseñador solo recalcula la hoja que edita, así que el `computed` guardado de la base puede ir por detrás. `withAccessories(celdas, elemento)` suma a la lista ya calculada los accesorios de la norma, al final de la sección de su semielaborado. Se aplica al mostrar: el elemento es dato del diseño, y la base, de la plantilla. Lo fija `bomBase.spec.ts`, que calcula la base con el motor y la compara con `buildBomSummaryCells`.
 
+Las **familias de fantasmas** que la estructura cuelga de un semielaborado (`phantomFamilies` de cada nodo) entran en las dos listas como una fila por familia en la sección de su semielaborado, después de los hijos y antes de los ítems: la familia en *Item*, «Fantasma : PROCESO» en *Descripción*, 1 UND y «Fantasma por elegir» en *Observación* (`bomPhantomFamilyRows`). El fantasma concreto se elige en el diseño.
+
 ## Restricciones
 
 1. **Una sola dependencia de runtime, `@rymel/formula-engine`.** Sin React,
