@@ -8,3 +8,7 @@ export * from "./decimals.js";
 export * from "./book.js";
 export * from "./serialize.js";
 export * from "./validate.js";
+export * from "./readOnly.js";
+export * from "./trace.js";
+export * from "./bom.js";
+export * from "./bomBase.js";

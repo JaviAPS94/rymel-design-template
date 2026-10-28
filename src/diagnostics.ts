@@ -17,6 +17,10 @@ export type DiagnosticCode =
   | "invalid-catalog-offsets"
   | "missing-catalog-table"
   | "missing-condition-cell"
+  | "missing-catalog-item"
+  | "duplicate-material-tag"
+  | "duplicate-bom-sheet"
+  | "read-only-input"
   | "empty-name"
   // Contenido de una celda
   | "graphic-directive"

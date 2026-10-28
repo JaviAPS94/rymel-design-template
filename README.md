@@ -147,9 +147,20 @@ petición de red por cada función de diseño que la plantilla invoque.
 
 Comprueba nombres de hoja únicos, referencias bien formadas, regiones dentro
 de la hoja, zonas de semielaborado sin solapes, desplazamientos de las tablas
-de catálogo, enlaces a ítems que existen, directivas de gráfico, y —apoyándose
-en `analyzeSheet` del motor— sintaxis, hojas inexistentes, funciones
-desconocidas, aridad y ciclos.
+de catálogo, enlaces a ítems que existen —la tabla y, si su columna de
+identificador no se calcula, también el ítem—, una sola celda MO y una sola MD
+en toda la plantilla, zonas de solo lectura sin desplegables dentro,
+directivas de gráfico, y —apoyándose en `analyzeSheet` del motor— sintaxis,
+hojas inexistentes, funciones desconocidas, aridad y ciclos.
+
+## Zonas de solo lectura
+
+`readOnlyZones` declara rangos que el diseñador no puede modificar; al autor
+no le restringen nada. `isReadOnly(hoja, ref)` es la única regla con la que el
+editor las señala, el diseñador las cumple y el servidor las comprueba. Es
+estructural: le basta `{ readOnlyZones, mergedCells }`, así que acepta los
+estilos canónicos, la hoja runtime del diseñador y los estilos guardados sin
+convertir. Una celda combinada está protegida entera si lo está su origen.
 
 Cada problema es un `TemplateDiagnostic` con su hoja, su celda o región, y un
 motivo escrito para quien está creando la plantilla.
@@ -162,6 +173,26 @@ de dependencias sea uno solo para toda la plantilla. Con un grafo por hoja,
 editar `Tablas!J14` no marca como sucias las celdas de `Resumen` que la
 consultan, que es justo lo que hace hoy `project-front` recalculando hoja por
 hoja en un bucle.
+
+## Rastreo de celdas
+
+`traceCell` dice de qué se alimenta una celda y a quién alimenta, incluso entre hojas, y puede recorrer la cadena completa de entradas. Lo usan el editor de plantillas del administrador y el diseñador del cliente, para que los dos expliquen una celda igual.
+
+No lee una plantilla directamente: recibe una función que devuelve lo escrito en cada celda. `templateCellLookup(plantilla)` es la de una plantilla; el cliente pasa la suya sobre las hojas del diseño. El grafo tiene que ser el del libro entero (`buildGraph(toEngineBook(...))` o equivalente), no uno por hoja: con uno por hoja no se ven los dependientes de otras hojas.
+
+## Lista de materiales
+
+`buildBomSummaryCells(estructura, desplegados, hojas, elemento)` arma la lista de materiales de un diseño como celdas de hoja de cálculo. Junta lo que define la plantilla (ítems vinculados dentro de las zonas de semielaborado, con la descripción y la unidad de su tabla de catálogo) con los accesorios que la norma asigna al elemento, sobre el árbol de la estructura BOM. Columnas: ID, Ítem, Descripción, Cantidad, U.M., Referencia, Costo promedio, Último costo y Observación. Lo que le falta a un accesorio se dice en Observación; no se rellena.
+
+`bomFingerprint(celdas)` es la huella (SHA-256 en hexadecimal) de una lista generada sin editar. El diseñador la guarda con sus ajustes para saber, al volver a abrirlos, si la lista generada cambió. El SHA-256 está escrito en el paquete (`sha256.ts`) porque `crypto.subtle` y `TextEncoder` no son parte de ES2022, y la huella tiene que ser la misma en el navegador y en Node.
+
+Las usan el diseñador y el administrador, para que la lista sea una sola. La fijan `bom.spec.ts` y `test/fixtures/bom-cases.json`.
+
+### La base, en la plantilla
+
+`buildBomBaseSheet(estructura, hojas)` genera la hoja «Lista de materiales» de una plantilla: las mismas secciones, pero con la cantidad, la descripción y la unidad de cada ítem como **fórmulas** a la celda vinculada y a su fila del catálogo (`=Hoja1!L50`), para que cada diseño la calcule con sus valores, y con los semielaborados hijos siempre desplegados. La marca `styles.billOfMaterials` (la estructura de origen) dice qué hoja es; `bomBaseSheet(hojas)` la encuentra. La validación no deja publicar dos (`duplicate-bom-sheet`).
+
+`evaluateBomBase(base, hojas)` calcula la hoja base de un diseño con los valores **actuales** de sus demás hojas: el diseñador solo recalcula la hoja que edita, así que el `computed` guardado de la base puede ir por detrás. `withAccessories(celdas, elemento)` suma a la lista ya calculada los accesorios de la norma, al final de la sección de su semielaborado. Se aplica al mostrar: el elemento es dato del diseño, y la base, de la plantilla. Lo fija `bomBase.spec.ts`, que calcula la base con el motor y la compara con `buildBomSummaryCells`.
 
 ## Restricciones
 

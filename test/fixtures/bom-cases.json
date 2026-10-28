@@ -1,0 +1,5873 @@
+{
+  "sub_design 90 · plegado": {
+    "sheets": [
+      {
+        "id": "design-sheet1",
+        "name": "Hoja1",
+        "cells": {
+          "B2": {
+            "value": "sdasd",
+            "formula": "sdasd",
+            "computed": "sdasd",
+            "bold": true,
+            "textColor": "#c01111",
+            "border": "1px solid #000"
+          },
+          "B3": {
+            "value": "asdasd",
+            "formula": "asdasd",
+            "computed": "asdasd",
+            "bold": false,
+            "textColor": "#360808",
+            "border": "1px solid #000"
+          },
+          "C3": {
+            "value": "asdasd",
+            "formula": "asdasd",
+            "computed": "asdasd",
+            "backgroundColor": "#a70606",
+            "border": "1px solid #000"
+          },
+          "D3": {
+            "value": "=4*6",
+            "formula": "=4*6",
+            "computed": 24,
+            "border": "1px solid #000"
+          },
+          "D4": {
+            "value": "mkdfg",
+            "formula": "mkdfg",
+            "computed": "mkdfg",
+            "border": "1px solid #000"
+          },
+          "C2": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "D2": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "B4": {
+            "value": "prueba",
+            "formula": "prueba",
+            "computed": "prueba",
+            "bold": true,
+            "textColor": "#0de338",
+            "border": "1px solid #000"
+          },
+          "C4": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "D7": {
+            "value": "=QUADRATIC(5)",
+            "formula": "=QUADRATIC(5)",
+            "computed": 34
+          },
+          "E6": {
+            "value": "=5*5",
+            "formula": "=5*5",
+            "computed": 25
+          },
+          "B9": {
+            "value": "DRAW:FRONTAL:NUCLEO:B6,C6",
+            "formula": "DRAW:FRONTAL:NUCLEO:B6,C6",
+            "computed": "DRAW:FRONTAL:NUCLEO:B6,C6"
+          },
+          "B6": {
+            "value": "340",
+            "formula": "340",
+            "computed": 340
+          },
+          "C6": {
+            "value": "340",
+            "formula": "340",
+            "computed": 340
+          },
+          "F6": {
+            "value": "320",
+            "formula": "320",
+            "computed": 320
+          },
+          "F9": {
+            "value": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55",
+            "formula": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55",
+            "computed": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55"
+          },
+          "K9": {
+            "value": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55",
+            "formula": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55",
+            "computed": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55"
+          },
+          "P9": {
+            "value": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55",
+            "formula": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55",
+            "computed": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55"
+          },
+          "F33": {
+            "value": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24",
+            "formula": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24",
+            "computed": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24"
+          },
+          "H59": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H60": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H61": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H62": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q59": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q60": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q61": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q62": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "D27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "E27": {
+            "value": "200",
+            "formula": "200",
+            "computed": 200
+          },
+          "B24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "C24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "B25": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "B26": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "B27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "C25": {
+            "value": "260",
+            "formula": "260",
+            "computed": 260
+          },
+          "C26": {
+            "value": "230",
+            "formula": "230",
+            "computed": 230
+          },
+          "C27": {
+            "value": "200",
+            "formula": "200",
+            "computed": 200
+          },
+          "E24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "E25": {
+            "value": "260",
+            "formula": "260",
+            "computed": 260
+          },
+          "E26": {
+            "value": "230",
+            "formula": "230",
+            "computed": 230
+          },
+          "G24": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "G25": {
+            "value": "74.8",
+            "formula": "74.8",
+            "computed": 74.8
+          },
+          "G26": {
+            "value": "10.1",
+            "formula": "10.1",
+            "computed": 10.1
+          },
+          "G27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H24": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H25": {
+            "value": "74.8",
+            "formula": "74.8",
+            "computed": 74.8
+          },
+          "H26": {
+            "value": "21.5",
+            "formula": "21.5",
+            "computed": 21.5
+          },
+          "H27": {
+            "value": "15.5",
+            "formula": "15.5",
+            "computed": 15.5
+          },
+          "J24": {
+            "value": "100",
+            "formula": "100",
+            "computed": 100
+          },
+          "K24": {
+            "value": "60",
+            "formula": "60",
+            "computed": 60
+          },
+          "L24": {
+            "value": "100",
+            "formula": "100",
+            "computed": 100
+          },
+          "A24": {
+            "value": "500",
+            "formula": "500",
+            "computed": 500
+          },
+          "I5": {
+            "value": "5",
+            "formula": "5",
+            "computed": 5,
+            "materialTag": "MO"
+          },
+          "J5": {
+            "value": "4",
+            "formula": "4",
+            "computed": 4,
+            "materialTag": "MD"
+          },
+          "B48": {
+            "value": "Item",
+            "formula": "Item",
+            "computed": "Item"
+          },
+          "C48": {
+            "value": "Descripcion",
+            "formula": "Descripcion",
+            "computed": "Descripcion"
+          },
+          "D48": {
+            "value": "UM",
+            "formula": "UM",
+            "computed": "UM"
+          },
+          "E48": {
+            "value": "Otros",
+            "formula": "Otros",
+            "computed": "Otros"
+          },
+          "B49": {
+            "value": "240",
+            "formula": "240",
+            "computed": 240
+          },
+          "B50": {
+            "value": "4102",
+            "formula": "4102",
+            "computed": 4102
+          },
+          "C49": {
+            "value": "Fibra de 2 mm",
+            "formula": "Fibra de 2 mm",
+            "computed": "Fibra de 2 mm"
+          },
+          "C50": {
+            "value": "Papel",
+            "formula": "Papel",
+            "computed": "Papel"
+          },
+          "D49": {
+            "value": "KLS",
+            "formula": "KLS",
+            "computed": "KLS"
+          },
+          "D50": {
+            "value": "KLS",
+            "formula": "KLS",
+            "computed": "KLS"
+          },
+          "G48": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "H48": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "G49": {
+            "value": "Aislamiento",
+            "formula": "Aislamiento",
+            "computed": "Aislamiento"
+          },
+          "H49": {
+            "value": "2",
+            "formula": "2",
+            "computed": 2
+          },
+          "G50": {
+            "value": "Prueba",
+            "formula": "Prueba",
+            "computed": "Prueba"
+          },
+          "H50": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "K48": {
+            "value": "Material Devanado",
+            "formula": "Material Devanado",
+            "computed": "Material Devanado"
+          },
+          "L48": {
+            "value": "Aluminio",
+            "formula": "Aluminio",
+            "computed": "Aluminio"
+          },
+          "K49": {
+            "value": "Tipo Conducto",
+            "formula": "Tipo Conducto",
+            "computed": "Tipo Conducto"
+          },
+          "L49": {
+            "value": "Rectangular",
+            "formula": "Rectangular",
+            "computed": "Rectangular"
+          },
+          "K50": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "L50": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3,
+            "catalogConditionCells": [
+              "L48",
+              "L49"
+            ],
+            "itemLink": {
+              "catalogSheetId": "design-sheet1",
+              "catalogTableId": "ict-1787939997868",
+              "itemId": "240"
+            }
+          }
+        },
+        "columnWidths": {
+          "2": 153,
+          "3": 130
+        },
+        "rowHeights": {},
+        "templateHiddenRows": [],
+        "templateHiddenColumns": [],
+        "userHiddenRows": [],
+        "userHiddenColumns": [],
+        "hiddenCells": [],
+        "freezeRow": 0,
+        "freezeColumn": 0,
+        "mergedCells": [
+          {
+            "startCell": "B9",
+            "endCell": "D13",
+            "rowSpan": 5,
+            "colSpan": 3
+          },
+          {
+            "startCell": "F9",
+            "endCell": "I22",
+            "rowSpan": 14,
+            "colSpan": 4
+          },
+          {
+            "startCell": "K9",
+            "endCell": "N22",
+            "rowSpan": 14,
+            "colSpan": 4
+          },
+          {
+            "startCell": "P9",
+            "endCell": "R21",
+            "rowSpan": 13,
+            "colSpan": 3
+          },
+          {
+            "startCell": "F33",
+            "endCell": "J46",
+            "rowSpan": 14,
+            "colSpan": 5
+          }
+        ],
+        "namedRanges": [],
+        "semiFinishedZones": [
+          {
+            "id": "sfz-1787940063897",
+            "semiFinishedId": 1,
+            "semiFinishedCode": "BOBINA",
+            "semiFinishedName": "Bobina",
+            "startCell": "G48",
+            "endCell": "H50"
+          },
+          {
+            "id": "sfz-1787940256929",
+            "semiFinishedId": 1,
+            "semiFinishedCode": "BOBINA",
+            "semiFinishedName": "Bobina",
+            "startCell": "L50",
+            "endCell": "L50"
+          }
+        ],
+        "itemCatalogTables": [
+          {
+            "id": "ict-1787939997868",
+            "name": "Catálogo Alambres",
+            "tags": [
+              "aluminio",
+              "rectangular"
+            ],
+            "startCell": "B48",
+            "endCell": "D50",
+            "headerRows": 1,
+            "idColumnOffset": 0,
+            "descriptionColumnOffset": 1,
+            "umColumnOffset": 2
+          }
+        ]
+      }
+    ],
+    "expanded": [],
+    "bom": {
+      "nodes": [
+        {
+          "id": 30,
+          "semiFinished": {
+            "id": 3,
+            "name": "SF 3",
+            "code": "SF3",
+            "createdAt": "",
+            "updatedAt": "",
+            "deletedAt": null
+          },
+          "type": "STANDARD",
+          "parentId": null,
+          "children": [
+            {
+              "id": 10,
+              "semiFinished": {
+                "id": 1,
+                "name": "SF 1",
+                "code": "SF1",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            },
+            {
+              "id": 40,
+              "semiFinished": {
+                "id": 4,
+                "name": "SF 4",
+                "code": "SF4",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "element": {
+      "values": "[{\"key\":\"power\",\"value\":25},{\"key\":\"accesories\",\"value\":\"[{\\\"id\\\":501,\\\"reference\\\":\\\"ACC-1\\\",\\\"description\\\":\\\"Pasatapas\\\",\\\"unitOfMeasurement\\\":\\\"UND\\\",\\\"value\\\":3,\\\"semiFinished\\\":{\\\"id\\\":1,\\\"name\\\":\\\"SF 1\\\"}},{\\\"id\\\":502,\\\"reference\\\":\\\"ACC-2\\\",\\\"description\\\":\\\"Placa\\\",\\\"unitMeasurement\\\":\\\"UND\\\",\\\"value\\\":1,\\\"semiFinished\\\":{\\\"id\\\":3,\\\"name\\\":\\\"SF 3\\\"}}]\"}]"
+    },
+    "cells": {
+      "A1": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "bold": true
+      },
+      "B1": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B2": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C2": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D2": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E2": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F2": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G2": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H2": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I2": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "B3": {
+        "value": "240",
+        "formula": "240",
+        "computed": "240"
+      },
+      "C3": {
+        "value": "Fibra de 2 mm",
+        "formula": "Fibra de 2 mm",
+        "computed": "Fibra de 2 mm"
+      },
+      "D3": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3"
+      },
+      "E3": {
+        "value": "KLS",
+        "formula": "KLS",
+        "computed": "KLS"
+      },
+      "B4": {
+        "value": "501",
+        "formula": "501",
+        "computed": "501"
+      },
+      "C4": {
+        "value": "Pasatapas",
+        "formula": "Pasatapas",
+        "computed": "Pasatapas"
+      },
+      "D4": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3"
+      },
+      "E4": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F4": {
+        "value": "ACC-1",
+        "formula": "ACC-1",
+        "computed": "ACC-1"
+      },
+      "I4": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      },
+      "A6": {
+        "value": "4",
+        "formula": "4",
+        "computed": "4",
+        "bold": true
+      },
+      "B6": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B7": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C7": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D7": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E7": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F7": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G7": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H7": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I7": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A9": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "bold": true
+      },
+      "B9": {
+        "value": "Semielaborado : SF 3",
+        "formula": "Semielaborado : SF 3",
+        "computed": "Semielaborado : SF 3",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B10": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C10": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D10": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E10": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F10": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G10": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H10": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I10": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A11": {
+        "value": "▶",
+        "formula": "▶",
+        "computed": "▶",
+        "bomToggleNodeId": 10,
+        "backgroundColor": "#fed7aa"
+      },
+      "B11": {
+        "value": "SF1",
+        "formula": "SF1",
+        "computed": "SF1",
+        "backgroundColor": "#fed7aa"
+      },
+      "C11": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "backgroundColor": "#fed7aa"
+      },
+      "D11": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E11": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "A12": {
+        "value": "▶",
+        "formula": "▶",
+        "computed": "▶",
+        "bomToggleNodeId": 40,
+        "backgroundColor": "#fed7aa"
+      },
+      "B12": {
+        "value": "SF4",
+        "formula": "SF4",
+        "computed": "SF4",
+        "backgroundColor": "#fed7aa"
+      },
+      "C12": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "backgroundColor": "#fed7aa"
+      },
+      "D12": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E12": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "B13": {
+        "value": "502",
+        "formula": "502",
+        "computed": "502"
+      },
+      "C13": {
+        "value": "Placa",
+        "formula": "Placa",
+        "computed": "Placa"
+      },
+      "D13": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1"
+      },
+      "E13": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F13": {
+        "value": "ACC-2",
+        "formula": "ACC-2",
+        "computed": "ACC-2"
+      },
+      "I13": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      }
+    }
+  },
+  "sub_design 90 · desplegado": {
+    "sheets": [
+      {
+        "id": "design-sheet1",
+        "name": "Hoja1",
+        "cells": {
+          "B2": {
+            "value": "sdasd",
+            "formula": "sdasd",
+            "computed": "sdasd",
+            "bold": true,
+            "textColor": "#c01111",
+            "border": "1px solid #000"
+          },
+          "B3": {
+            "value": "asdasd",
+            "formula": "asdasd",
+            "computed": "asdasd",
+            "bold": false,
+            "textColor": "#360808",
+            "border": "1px solid #000"
+          },
+          "C3": {
+            "value": "asdasd",
+            "formula": "asdasd",
+            "computed": "asdasd",
+            "backgroundColor": "#a70606",
+            "border": "1px solid #000"
+          },
+          "D3": {
+            "value": "=4*6",
+            "formula": "=4*6",
+            "computed": 24,
+            "border": "1px solid #000"
+          },
+          "D4": {
+            "value": "mkdfg",
+            "formula": "mkdfg",
+            "computed": "mkdfg",
+            "border": "1px solid #000"
+          },
+          "C2": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "D2": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "B4": {
+            "value": "prueba",
+            "formula": "prueba",
+            "computed": "prueba",
+            "bold": true,
+            "textColor": "#0de338",
+            "border": "1px solid #000"
+          },
+          "C4": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "D7": {
+            "value": "=QUADRATIC(5)",
+            "formula": "=QUADRATIC(5)",
+            "computed": 34
+          },
+          "E6": {
+            "value": "=5*5",
+            "formula": "=5*5",
+            "computed": 25
+          },
+          "B9": {
+            "value": "DRAW:FRONTAL:NUCLEO:B6,C6",
+            "formula": "DRAW:FRONTAL:NUCLEO:B6,C6",
+            "computed": "DRAW:FRONTAL:NUCLEO:B6,C6"
+          },
+          "B6": {
+            "value": "340",
+            "formula": "340",
+            "computed": 340
+          },
+          "C6": {
+            "value": "340",
+            "formula": "340",
+            "computed": 340
+          },
+          "F6": {
+            "value": "320",
+            "formula": "320",
+            "computed": 320
+          },
+          "F9": {
+            "value": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55",
+            "formula": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55",
+            "computed": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55"
+          },
+          "K9": {
+            "value": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55",
+            "formula": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55",
+            "computed": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55"
+          },
+          "P9": {
+            "value": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55",
+            "formula": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55",
+            "computed": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55"
+          },
+          "F33": {
+            "value": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24",
+            "formula": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24",
+            "computed": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24"
+          },
+          "H59": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H60": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H61": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H62": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q59": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q60": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q61": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q62": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "D27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "E27": {
+            "value": "200",
+            "formula": "200",
+            "computed": 200
+          },
+          "B24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "C24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "B25": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "B26": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "B27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "C25": {
+            "value": "260",
+            "formula": "260",
+            "computed": 260
+          },
+          "C26": {
+            "value": "230",
+            "formula": "230",
+            "computed": 230
+          },
+          "C27": {
+            "value": "200",
+            "formula": "200",
+            "computed": 200
+          },
+          "E24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "E25": {
+            "value": "260",
+            "formula": "260",
+            "computed": 260
+          },
+          "E26": {
+            "value": "230",
+            "formula": "230",
+            "computed": 230
+          },
+          "G24": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "G25": {
+            "value": "74.8",
+            "formula": "74.8",
+            "computed": 74.8
+          },
+          "G26": {
+            "value": "10.1",
+            "formula": "10.1",
+            "computed": 10.1
+          },
+          "G27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H24": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H25": {
+            "value": "74.8",
+            "formula": "74.8",
+            "computed": 74.8
+          },
+          "H26": {
+            "value": "21.5",
+            "formula": "21.5",
+            "computed": 21.5
+          },
+          "H27": {
+            "value": "15.5",
+            "formula": "15.5",
+            "computed": 15.5
+          },
+          "J24": {
+            "value": "100",
+            "formula": "100",
+            "computed": 100
+          },
+          "K24": {
+            "value": "60",
+            "formula": "60",
+            "computed": 60
+          },
+          "L24": {
+            "value": "100",
+            "formula": "100",
+            "computed": 100
+          },
+          "A24": {
+            "value": "500",
+            "formula": "500",
+            "computed": 500
+          },
+          "I5": {
+            "value": "5",
+            "formula": "5",
+            "computed": 5,
+            "materialTag": "MO"
+          },
+          "J5": {
+            "value": "4",
+            "formula": "4",
+            "computed": 4,
+            "materialTag": "MD"
+          },
+          "B48": {
+            "value": "Item",
+            "formula": "Item",
+            "computed": "Item"
+          },
+          "C48": {
+            "value": "Descripcion",
+            "formula": "Descripcion",
+            "computed": "Descripcion"
+          },
+          "D48": {
+            "value": "UM",
+            "formula": "UM",
+            "computed": "UM"
+          },
+          "E48": {
+            "value": "Otros",
+            "formula": "Otros",
+            "computed": "Otros"
+          },
+          "B49": {
+            "value": "240",
+            "formula": "240",
+            "computed": 240
+          },
+          "B50": {
+            "value": "4102",
+            "formula": "4102",
+            "computed": 4102
+          },
+          "C49": {
+            "value": "Fibra de 2 mm",
+            "formula": "Fibra de 2 mm",
+            "computed": "Fibra de 2 mm"
+          },
+          "C50": {
+            "value": "Papel",
+            "formula": "Papel",
+            "computed": "Papel"
+          },
+          "D49": {
+            "value": "KLS",
+            "formula": "KLS",
+            "computed": "KLS"
+          },
+          "D50": {
+            "value": "KLS",
+            "formula": "KLS",
+            "computed": "KLS"
+          },
+          "G48": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "H48": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "G49": {
+            "value": "Aislamiento",
+            "formula": "Aislamiento",
+            "computed": "Aislamiento"
+          },
+          "H49": {
+            "value": "2",
+            "formula": "2",
+            "computed": 2
+          },
+          "G50": {
+            "value": "Prueba",
+            "formula": "Prueba",
+            "computed": "Prueba"
+          },
+          "H50": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "K48": {
+            "value": "Material Devanado",
+            "formula": "Material Devanado",
+            "computed": "Material Devanado"
+          },
+          "L48": {
+            "value": "Aluminio",
+            "formula": "Aluminio",
+            "computed": "Aluminio"
+          },
+          "K49": {
+            "value": "Tipo Conducto",
+            "formula": "Tipo Conducto",
+            "computed": "Tipo Conducto"
+          },
+          "L49": {
+            "value": "Rectangular",
+            "formula": "Rectangular",
+            "computed": "Rectangular"
+          },
+          "K50": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "L50": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3,
+            "catalogConditionCells": [
+              "L48",
+              "L49"
+            ],
+            "itemLink": {
+              "catalogSheetId": "design-sheet1",
+              "catalogTableId": "ict-1787939997868",
+              "itemId": "240"
+            }
+          }
+        },
+        "columnWidths": {
+          "2": 153,
+          "3": 130
+        },
+        "rowHeights": {},
+        "templateHiddenRows": [],
+        "templateHiddenColumns": [],
+        "userHiddenRows": [],
+        "userHiddenColumns": [],
+        "hiddenCells": [],
+        "freezeRow": 0,
+        "freezeColumn": 0,
+        "mergedCells": [
+          {
+            "startCell": "B9",
+            "endCell": "D13",
+            "rowSpan": 5,
+            "colSpan": 3
+          },
+          {
+            "startCell": "F9",
+            "endCell": "I22",
+            "rowSpan": 14,
+            "colSpan": 4
+          },
+          {
+            "startCell": "K9",
+            "endCell": "N22",
+            "rowSpan": 14,
+            "colSpan": 4
+          },
+          {
+            "startCell": "P9",
+            "endCell": "R21",
+            "rowSpan": 13,
+            "colSpan": 3
+          },
+          {
+            "startCell": "F33",
+            "endCell": "J46",
+            "rowSpan": 14,
+            "colSpan": 5
+          }
+        ],
+        "namedRanges": [],
+        "semiFinishedZones": [
+          {
+            "id": "sfz-1787940063897",
+            "semiFinishedId": 1,
+            "semiFinishedCode": "BOBINA",
+            "semiFinishedName": "Bobina",
+            "startCell": "G48",
+            "endCell": "H50"
+          },
+          {
+            "id": "sfz-1787940256929",
+            "semiFinishedId": 1,
+            "semiFinishedCode": "BOBINA",
+            "semiFinishedName": "Bobina",
+            "startCell": "L50",
+            "endCell": "L50"
+          }
+        ],
+        "itemCatalogTables": [
+          {
+            "id": "ict-1787939997868",
+            "name": "Catálogo Alambres",
+            "tags": [
+              "aluminio",
+              "rectangular"
+            ],
+            "startCell": "B48",
+            "endCell": "D50",
+            "headerRows": 1,
+            "idColumnOffset": 0,
+            "descriptionColumnOffset": 1,
+            "umColumnOffset": 2
+          }
+        ]
+      }
+    ],
+    "expanded": [
+      10,
+      40
+    ],
+    "bom": {
+      "nodes": [
+        {
+          "id": 30,
+          "semiFinished": {
+            "id": 3,
+            "name": "SF 3",
+            "code": "SF3",
+            "createdAt": "",
+            "updatedAt": "",
+            "deletedAt": null
+          },
+          "type": "STANDARD",
+          "parentId": null,
+          "children": [
+            {
+              "id": 10,
+              "semiFinished": {
+                "id": 1,
+                "name": "SF 1",
+                "code": "SF1",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            },
+            {
+              "id": 40,
+              "semiFinished": {
+                "id": 4,
+                "name": "SF 4",
+                "code": "SF4",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "element": {
+      "values": "[{\"key\":\"power\",\"value\":25},{\"key\":\"accesories\",\"value\":\"[{\\\"id\\\":501,\\\"reference\\\":\\\"ACC-1\\\",\\\"description\\\":\\\"Pasatapas\\\",\\\"unitOfMeasurement\\\":\\\"UND\\\",\\\"value\\\":3,\\\"semiFinished\\\":{\\\"id\\\":1,\\\"name\\\":\\\"SF 1\\\"}},{\\\"id\\\":502,\\\"reference\\\":\\\"ACC-2\\\",\\\"description\\\":\\\"Placa\\\",\\\"unitMeasurement\\\":\\\"UND\\\",\\\"value\\\":1,\\\"semiFinished\\\":{\\\"id\\\":3,\\\"name\\\":\\\"SF 3\\\"}}]\"}]"
+    },
+    "cells": {
+      "A1": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "bold": true
+      },
+      "B1": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B2": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C2": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D2": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E2": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F2": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G2": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H2": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I2": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "B3": {
+        "value": "240",
+        "formula": "240",
+        "computed": "240"
+      },
+      "C3": {
+        "value": "Fibra de 2 mm",
+        "formula": "Fibra de 2 mm",
+        "computed": "Fibra de 2 mm"
+      },
+      "D3": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3"
+      },
+      "E3": {
+        "value": "KLS",
+        "formula": "KLS",
+        "computed": "KLS"
+      },
+      "B4": {
+        "value": "501",
+        "formula": "501",
+        "computed": "501"
+      },
+      "C4": {
+        "value": "Pasatapas",
+        "formula": "Pasatapas",
+        "computed": "Pasatapas"
+      },
+      "D4": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3"
+      },
+      "E4": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F4": {
+        "value": "ACC-1",
+        "formula": "ACC-1",
+        "computed": "ACC-1"
+      },
+      "I4": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      },
+      "A6": {
+        "value": "4",
+        "formula": "4",
+        "computed": "4",
+        "bold": true
+      },
+      "B6": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B7": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C7": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D7": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E7": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F7": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G7": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H7": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I7": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A9": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "bold": true
+      },
+      "B9": {
+        "value": "Semielaborado : SF 3",
+        "formula": "Semielaborado : SF 3",
+        "computed": "Semielaborado : SF 3",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B10": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C10": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D10": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E10": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F10": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G10": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H10": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I10": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A11": {
+        "value": "▼",
+        "formula": "▼",
+        "computed": "▼",
+        "bomToggleNodeId": 10,
+        "backgroundColor": "#fed7aa"
+      },
+      "B11": {
+        "value": "SF1",
+        "formula": "SF1",
+        "computed": "SF1",
+        "backgroundColor": "#fed7aa"
+      },
+      "C11": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "backgroundColor": "#fed7aa"
+      },
+      "D11": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E11": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "B12": {
+        "value": "240",
+        "formula": "240",
+        "computed": "240",
+        "backgroundColor": "#fff7ed"
+      },
+      "C12": {
+        "value": "Fibra de 2 mm",
+        "formula": "Fibra de 2 mm",
+        "computed": "Fibra de 2 mm",
+        "backgroundColor": "#fff7ed"
+      },
+      "D12": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "backgroundColor": "#fff7ed"
+      },
+      "E12": {
+        "value": "KLS",
+        "formula": "KLS",
+        "computed": "KLS",
+        "backgroundColor": "#fff7ed"
+      },
+      "B13": {
+        "value": "501",
+        "formula": "501",
+        "computed": "501",
+        "backgroundColor": "#fff7ed"
+      },
+      "C13": {
+        "value": "Pasatapas",
+        "formula": "Pasatapas",
+        "computed": "Pasatapas",
+        "backgroundColor": "#fff7ed"
+      },
+      "D13": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "backgroundColor": "#fff7ed"
+      },
+      "E13": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fff7ed"
+      },
+      "F13": {
+        "value": "ACC-1",
+        "formula": "ACC-1",
+        "computed": "ACC-1",
+        "backgroundColor": "#fff7ed"
+      },
+      "I13": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma",
+        "backgroundColor": "#fff7ed"
+      },
+      "A14": {
+        "value": "▼",
+        "formula": "▼",
+        "computed": "▼",
+        "bomToggleNodeId": 40,
+        "backgroundColor": "#fed7aa"
+      },
+      "B14": {
+        "value": "SF4",
+        "formula": "SF4",
+        "computed": "SF4",
+        "backgroundColor": "#fed7aa"
+      },
+      "C14": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "backgroundColor": "#fed7aa"
+      },
+      "D14": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E14": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "B15": {
+        "value": "502",
+        "formula": "502",
+        "computed": "502"
+      },
+      "C15": {
+        "value": "Placa",
+        "formula": "Placa",
+        "computed": "Placa"
+      },
+      "D15": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1"
+      },
+      "E15": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F15": {
+        "value": "ACC-2",
+        "formula": "ACC-2",
+        "computed": "ACC-2"
+      },
+      "I15": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      }
+    }
+  },
+  "sub_design 91 · plegado": {
+    "sheets": [
+      {
+        "id": "design-sheet1",
+        "name": "Hoja1",
+        "cells": {
+          "B2": {
+            "value": "Calculos de diseno",
+            "formula": "Calculos de diseno",
+            "computed": "Calculos de diseno",
+            "bold": true,
+            "textColor": "#04f6f2",
+            "backgroundColor": "#26e30d"
+          },
+          "B3": {
+            "value": "9",
+            "formula": "9",
+            "computed": 9,
+            "border": "1px solid #000"
+          },
+          "B4": {
+            "value": "5",
+            "formula": "5",
+            "computed": 5,
+            "border": "1px solid #000"
+          },
+          "B5": {
+            "value": "=DISENO_ALEX(E2)",
+            "formula": "=DISENO_ALEX(E2)",
+            "computed": 15
+          },
+          "D2": {
+            "value": "5",
+            "formula": "5",
+            "computed": 5
+          },
+          "E6": {
+            "value": "=6*6",
+            "formula": "=6*6",
+            "computed": 36
+          },
+          "E2": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "F9": {
+            "value": "54",
+            "formula": "54",
+            "computed": 54
+          },
+          "G8": {
+            "value": "56",
+            "formula": "56",
+            "computed": 56
+          },
+          "G6": {
+            "value": "1",
+            "formula": "1",
+            "computed": 1,
+            "materialTag": "MO"
+          },
+          "G7": {
+            "value": "2",
+            "formula": "2",
+            "computed": 2,
+            "materialTag": "MD"
+          },
+          "B11": {
+            "value": "Catalogo de materiales",
+            "formula": "Catalogo de materiales",
+            "computed": "Catalogo de materiales"
+          },
+          "B12": {
+            "value": "Item",
+            "formula": "Item",
+            "computed": "Item"
+          },
+          "C12": {
+            "value": "Descripcion",
+            "formula": "Descripcion",
+            "computed": "Descripcion"
+          },
+          "D12": {
+            "value": "UM",
+            "formula": "UM",
+            "computed": "UM"
+          },
+          "B13": {
+            "value": "456",
+            "formula": "456",
+            "computed": 456
+          },
+          "C13": {
+            "value": "Prueba 1",
+            "formula": "Prueba 1",
+            "computed": "Prueba 1"
+          },
+          "D13": {
+            "value": "KG",
+            "formula": "KG",
+            "computed": "KG"
+          },
+          "B14": {
+            "value": "890",
+            "formula": "890",
+            "computed": 890
+          },
+          "C14": {
+            "value": "Prueba 2",
+            "formula": "Prueba 2",
+            "computed": "Prueba 2"
+          },
+          "D14": {
+            "value": "KG",
+            "formula": "KG",
+            "computed": "KG"
+          },
+          "F12": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "G12": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3,
+            "itemLink": {
+              "catalogSheetId": "design-sheet1",
+              "catalogTableId": "ict-1787946887172",
+              "itemId": "456"
+            },
+            "catalogConditionCells": [
+              "G11"
+            ]
+          },
+          "G11": {
+            "value": "aluminio",
+            "formula": "aluminio",
+            "computed": "aluminio"
+          }
+        },
+        "columnWidths": {
+          "1": 142
+        },
+        "rowHeights": {},
+        "templateHiddenRows": [],
+        "templateHiddenColumns": [],
+        "userHiddenRows": [],
+        "userHiddenColumns": [],
+        "hiddenCells": [],
+        "freezeRow": 0,
+        "freezeColumn": 0,
+        "mergedCells": [],
+        "namedRanges": [],
+        "semiFinishedZones": [
+          {
+            "id": "sfz-1787946924495",
+            "semiFinishedId": 2,
+            "semiFinishedCode": "NUCLEO",
+            "semiFinishedName": "Núcleo",
+            "startCell": "G12",
+            "endCell": "G12"
+          }
+        ],
+        "itemCatalogTables": [
+          {
+            "id": "ict-1787946887172",
+            "name": "Catalogo Aluminio",
+            "tags": [
+              "aluminio"
+            ],
+            "startCell": "B12",
+            "endCell": "D14",
+            "headerRows": 1,
+            "idColumnOffset": 0,
+            "descriptionColumnOffset": 1,
+            "umColumnOffset": 2
+          }
+        ]
+      }
+    ],
+    "expanded": [],
+    "bom": {
+      "nodes": [
+        {
+          "id": 30,
+          "semiFinished": {
+            "id": 3,
+            "name": "SF 3",
+            "code": "SF3",
+            "createdAt": "",
+            "updatedAt": "",
+            "deletedAt": null
+          },
+          "type": "STANDARD",
+          "parentId": null,
+          "children": [
+            {
+              "id": 10,
+              "semiFinished": {
+                "id": 1,
+                "name": "SF 1",
+                "code": "SF1",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            },
+            {
+              "id": 40,
+              "semiFinished": {
+                "id": 4,
+                "name": "SF 4",
+                "code": "SF4",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "element": {
+      "values": "[{\"key\":\"power\",\"value\":25},{\"key\":\"accesories\",\"value\":\"[{\\\"id\\\":501,\\\"reference\\\":\\\"ACC-1\\\",\\\"description\\\":\\\"Pasatapas\\\",\\\"unitOfMeasurement\\\":\\\"UND\\\",\\\"value\\\":3,\\\"semiFinished\\\":{\\\"id\\\":1,\\\"name\\\":\\\"SF 1\\\"}},{\\\"id\\\":502,\\\"reference\\\":\\\"ACC-2\\\",\\\"description\\\":\\\"Placa\\\",\\\"unitMeasurement\\\":\\\"UND\\\",\\\"value\\\":1,\\\"semiFinished\\\":{\\\"id\\\":3,\\\"name\\\":\\\"SF 3\\\"}}]\"}]"
+    },
+    "cells": {
+      "A1": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "bold": true
+      },
+      "B1": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B2": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C2": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D2": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E2": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F2": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G2": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H2": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I2": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "B3": {
+        "value": "501",
+        "formula": "501",
+        "computed": "501"
+      },
+      "C3": {
+        "value": "Pasatapas",
+        "formula": "Pasatapas",
+        "computed": "Pasatapas"
+      },
+      "D3": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3"
+      },
+      "E3": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F3": {
+        "value": "ACC-1",
+        "formula": "ACC-1",
+        "computed": "ACC-1"
+      },
+      "I3": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      },
+      "A5": {
+        "value": "4",
+        "formula": "4",
+        "computed": "4",
+        "bold": true
+      },
+      "B5": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B6": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C6": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D6": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E6": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F6": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G6": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H6": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I6": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A8": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "bold": true
+      },
+      "B8": {
+        "value": "Semielaborado : SF 3",
+        "formula": "Semielaborado : SF 3",
+        "computed": "Semielaborado : SF 3",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B9": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C9": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D9": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E9": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F9": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G9": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H9": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I9": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A10": {
+        "value": "▶",
+        "formula": "▶",
+        "computed": "▶",
+        "bomToggleNodeId": 10,
+        "backgroundColor": "#fed7aa"
+      },
+      "B10": {
+        "value": "SF1",
+        "formula": "SF1",
+        "computed": "SF1",
+        "backgroundColor": "#fed7aa"
+      },
+      "C10": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "backgroundColor": "#fed7aa"
+      },
+      "D10": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E10": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "A11": {
+        "value": "▶",
+        "formula": "▶",
+        "computed": "▶",
+        "bomToggleNodeId": 40,
+        "backgroundColor": "#fed7aa"
+      },
+      "B11": {
+        "value": "SF4",
+        "formula": "SF4",
+        "computed": "SF4",
+        "backgroundColor": "#fed7aa"
+      },
+      "C11": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "backgroundColor": "#fed7aa"
+      },
+      "D11": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E11": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "B12": {
+        "value": "502",
+        "formula": "502",
+        "computed": "502"
+      },
+      "C12": {
+        "value": "Placa",
+        "formula": "Placa",
+        "computed": "Placa"
+      },
+      "D12": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1"
+      },
+      "E12": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F12": {
+        "value": "ACC-2",
+        "formula": "ACC-2",
+        "computed": "ACC-2"
+      },
+      "I12": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      }
+    }
+  },
+  "sub_design 91 · desplegado": {
+    "sheets": [
+      {
+        "id": "design-sheet1",
+        "name": "Hoja1",
+        "cells": {
+          "B2": {
+            "value": "Calculos de diseno",
+            "formula": "Calculos de diseno",
+            "computed": "Calculos de diseno",
+            "bold": true,
+            "textColor": "#04f6f2",
+            "backgroundColor": "#26e30d"
+          },
+          "B3": {
+            "value": "9",
+            "formula": "9",
+            "computed": 9,
+            "border": "1px solid #000"
+          },
+          "B4": {
+            "value": "5",
+            "formula": "5",
+            "computed": 5,
+            "border": "1px solid #000"
+          },
+          "B5": {
+            "value": "=DISENO_ALEX(E2)",
+            "formula": "=DISENO_ALEX(E2)",
+            "computed": 15
+          },
+          "D2": {
+            "value": "5",
+            "formula": "5",
+            "computed": 5
+          },
+          "E6": {
+            "value": "=6*6",
+            "formula": "=6*6",
+            "computed": 36
+          },
+          "E2": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "F9": {
+            "value": "54",
+            "formula": "54",
+            "computed": 54
+          },
+          "G8": {
+            "value": "56",
+            "formula": "56",
+            "computed": 56
+          },
+          "G6": {
+            "value": "1",
+            "formula": "1",
+            "computed": 1,
+            "materialTag": "MO"
+          },
+          "G7": {
+            "value": "2",
+            "formula": "2",
+            "computed": 2,
+            "materialTag": "MD"
+          },
+          "B11": {
+            "value": "Catalogo de materiales",
+            "formula": "Catalogo de materiales",
+            "computed": "Catalogo de materiales"
+          },
+          "B12": {
+            "value": "Item",
+            "formula": "Item",
+            "computed": "Item"
+          },
+          "C12": {
+            "value": "Descripcion",
+            "formula": "Descripcion",
+            "computed": "Descripcion"
+          },
+          "D12": {
+            "value": "UM",
+            "formula": "UM",
+            "computed": "UM"
+          },
+          "B13": {
+            "value": "456",
+            "formula": "456",
+            "computed": 456
+          },
+          "C13": {
+            "value": "Prueba 1",
+            "formula": "Prueba 1",
+            "computed": "Prueba 1"
+          },
+          "D13": {
+            "value": "KG",
+            "formula": "KG",
+            "computed": "KG"
+          },
+          "B14": {
+            "value": "890",
+            "formula": "890",
+            "computed": 890
+          },
+          "C14": {
+            "value": "Prueba 2",
+            "formula": "Prueba 2",
+            "computed": "Prueba 2"
+          },
+          "D14": {
+            "value": "KG",
+            "formula": "KG",
+            "computed": "KG"
+          },
+          "F12": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "G12": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3,
+            "itemLink": {
+              "catalogSheetId": "design-sheet1",
+              "catalogTableId": "ict-1787946887172",
+              "itemId": "456"
+            },
+            "catalogConditionCells": [
+              "G11"
+            ]
+          },
+          "G11": {
+            "value": "aluminio",
+            "formula": "aluminio",
+            "computed": "aluminio"
+          }
+        },
+        "columnWidths": {
+          "1": 142
+        },
+        "rowHeights": {},
+        "templateHiddenRows": [],
+        "templateHiddenColumns": [],
+        "userHiddenRows": [],
+        "userHiddenColumns": [],
+        "hiddenCells": [],
+        "freezeRow": 0,
+        "freezeColumn": 0,
+        "mergedCells": [],
+        "namedRanges": [],
+        "semiFinishedZones": [
+          {
+            "id": "sfz-1787946924495",
+            "semiFinishedId": 2,
+            "semiFinishedCode": "NUCLEO",
+            "semiFinishedName": "Núcleo",
+            "startCell": "G12",
+            "endCell": "G12"
+          }
+        ],
+        "itemCatalogTables": [
+          {
+            "id": "ict-1787946887172",
+            "name": "Catalogo Aluminio",
+            "tags": [
+              "aluminio"
+            ],
+            "startCell": "B12",
+            "endCell": "D14",
+            "headerRows": 1,
+            "idColumnOffset": 0,
+            "descriptionColumnOffset": 1,
+            "umColumnOffset": 2
+          }
+        ]
+      }
+    ],
+    "expanded": [
+      10,
+      40
+    ],
+    "bom": {
+      "nodes": [
+        {
+          "id": 30,
+          "semiFinished": {
+            "id": 3,
+            "name": "SF 3",
+            "code": "SF3",
+            "createdAt": "",
+            "updatedAt": "",
+            "deletedAt": null
+          },
+          "type": "STANDARD",
+          "parentId": null,
+          "children": [
+            {
+              "id": 10,
+              "semiFinished": {
+                "id": 1,
+                "name": "SF 1",
+                "code": "SF1",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            },
+            {
+              "id": 40,
+              "semiFinished": {
+                "id": 4,
+                "name": "SF 4",
+                "code": "SF4",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "element": {
+      "values": "[{\"key\":\"power\",\"value\":25},{\"key\":\"accesories\",\"value\":\"[{\\\"id\\\":501,\\\"reference\\\":\\\"ACC-1\\\",\\\"description\\\":\\\"Pasatapas\\\",\\\"unitOfMeasurement\\\":\\\"UND\\\",\\\"value\\\":3,\\\"semiFinished\\\":{\\\"id\\\":1,\\\"name\\\":\\\"SF 1\\\"}},{\\\"id\\\":502,\\\"reference\\\":\\\"ACC-2\\\",\\\"description\\\":\\\"Placa\\\",\\\"unitMeasurement\\\":\\\"UND\\\",\\\"value\\\":1,\\\"semiFinished\\\":{\\\"id\\\":3,\\\"name\\\":\\\"SF 3\\\"}}]\"}]"
+    },
+    "cells": {
+      "A1": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "bold": true
+      },
+      "B1": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B2": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C2": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D2": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E2": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F2": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G2": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H2": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I2": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "B3": {
+        "value": "501",
+        "formula": "501",
+        "computed": "501"
+      },
+      "C3": {
+        "value": "Pasatapas",
+        "formula": "Pasatapas",
+        "computed": "Pasatapas"
+      },
+      "D3": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3"
+      },
+      "E3": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F3": {
+        "value": "ACC-1",
+        "formula": "ACC-1",
+        "computed": "ACC-1"
+      },
+      "I3": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      },
+      "A5": {
+        "value": "4",
+        "formula": "4",
+        "computed": "4",
+        "bold": true
+      },
+      "B5": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B6": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C6": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D6": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E6": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F6": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G6": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H6": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I6": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A8": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "bold": true
+      },
+      "B8": {
+        "value": "Semielaborado : SF 3",
+        "formula": "Semielaborado : SF 3",
+        "computed": "Semielaborado : SF 3",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B9": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C9": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D9": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E9": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F9": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G9": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H9": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I9": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A10": {
+        "value": "▼",
+        "formula": "▼",
+        "computed": "▼",
+        "bomToggleNodeId": 10,
+        "backgroundColor": "#fed7aa"
+      },
+      "B10": {
+        "value": "SF1",
+        "formula": "SF1",
+        "computed": "SF1",
+        "backgroundColor": "#fed7aa"
+      },
+      "C10": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "backgroundColor": "#fed7aa"
+      },
+      "D10": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E10": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "B11": {
+        "value": "501",
+        "formula": "501",
+        "computed": "501",
+        "backgroundColor": "#fff7ed"
+      },
+      "C11": {
+        "value": "Pasatapas",
+        "formula": "Pasatapas",
+        "computed": "Pasatapas",
+        "backgroundColor": "#fff7ed"
+      },
+      "D11": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "backgroundColor": "#fff7ed"
+      },
+      "E11": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fff7ed"
+      },
+      "F11": {
+        "value": "ACC-1",
+        "formula": "ACC-1",
+        "computed": "ACC-1",
+        "backgroundColor": "#fff7ed"
+      },
+      "I11": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma",
+        "backgroundColor": "#fff7ed"
+      },
+      "A12": {
+        "value": "▼",
+        "formula": "▼",
+        "computed": "▼",
+        "bomToggleNodeId": 40,
+        "backgroundColor": "#fed7aa"
+      },
+      "B12": {
+        "value": "SF4",
+        "formula": "SF4",
+        "computed": "SF4",
+        "backgroundColor": "#fed7aa"
+      },
+      "C12": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "backgroundColor": "#fed7aa"
+      },
+      "D12": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E12": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "B13": {
+        "value": "502",
+        "formula": "502",
+        "computed": "502"
+      },
+      "C13": {
+        "value": "Placa",
+        "formula": "Placa",
+        "computed": "Placa"
+      },
+      "D13": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1"
+      },
+      "E13": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F13": {
+        "value": "ACC-2",
+        "formula": "ACC-2",
+        "computed": "ACC-2"
+      },
+      "I13": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      }
+    }
+  },
+  "ítem inexistente": {
+    "sheets": [
+      {
+        "id": "design-sheet1",
+        "name": "Hoja1",
+        "cells": {
+          "B2": {
+            "value": "sdasd",
+            "formula": "sdasd",
+            "computed": "sdasd",
+            "bold": true,
+            "textColor": "#c01111",
+            "border": "1px solid #000"
+          },
+          "B3": {
+            "value": "asdasd",
+            "formula": "asdasd",
+            "computed": "asdasd",
+            "bold": false,
+            "textColor": "#360808",
+            "border": "1px solid #000"
+          },
+          "C3": {
+            "value": "asdasd",
+            "formula": "asdasd",
+            "computed": "asdasd",
+            "backgroundColor": "#a70606",
+            "border": "1px solid #000"
+          },
+          "D3": {
+            "value": "=4*6",
+            "formula": "=4*6",
+            "computed": 24,
+            "border": "1px solid #000"
+          },
+          "D4": {
+            "value": "mkdfg",
+            "formula": "mkdfg",
+            "computed": "mkdfg",
+            "border": "1px solid #000"
+          },
+          "C2": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "D2": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "B4": {
+            "value": "prueba",
+            "formula": "prueba",
+            "computed": "prueba",
+            "bold": true,
+            "textColor": "#0de338",
+            "border": "1px solid #000"
+          },
+          "C4": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "D7": {
+            "value": "=QUADRATIC(5)",
+            "formula": "=QUADRATIC(5)",
+            "computed": 34
+          },
+          "E6": {
+            "value": "=5*5",
+            "formula": "=5*5",
+            "computed": 25
+          },
+          "B9": {
+            "value": "DRAW:FRONTAL:NUCLEO:B6,C6",
+            "formula": "DRAW:FRONTAL:NUCLEO:B6,C6",
+            "computed": "DRAW:FRONTAL:NUCLEO:B6,C6"
+          },
+          "B6": {
+            "value": "340",
+            "formula": "340",
+            "computed": 340
+          },
+          "C6": {
+            "value": "340",
+            "formula": "340",
+            "computed": 340
+          },
+          "F6": {
+            "value": "320",
+            "formula": "320",
+            "computed": 320
+          },
+          "F9": {
+            "value": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55",
+            "formula": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55",
+            "computed": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55"
+          },
+          "K9": {
+            "value": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55",
+            "formula": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55",
+            "computed": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55"
+          },
+          "P9": {
+            "value": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55",
+            "formula": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55",
+            "computed": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55"
+          },
+          "F33": {
+            "value": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24",
+            "formula": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24",
+            "computed": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24"
+          },
+          "H59": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H60": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H61": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H62": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q59": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q60": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q61": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q62": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "D27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "E27": {
+            "value": "200",
+            "formula": "200",
+            "computed": 200
+          },
+          "B24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "C24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "B25": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "B26": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "B27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "C25": {
+            "value": "260",
+            "formula": "260",
+            "computed": 260
+          },
+          "C26": {
+            "value": "230",
+            "formula": "230",
+            "computed": 230
+          },
+          "C27": {
+            "value": "200",
+            "formula": "200",
+            "computed": 200
+          },
+          "E24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "E25": {
+            "value": "260",
+            "formula": "260",
+            "computed": 260
+          },
+          "E26": {
+            "value": "230",
+            "formula": "230",
+            "computed": 230
+          },
+          "G24": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "G25": {
+            "value": "74.8",
+            "formula": "74.8",
+            "computed": 74.8
+          },
+          "G26": {
+            "value": "10.1",
+            "formula": "10.1",
+            "computed": 10.1
+          },
+          "G27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H24": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H25": {
+            "value": "74.8",
+            "formula": "74.8",
+            "computed": 74.8
+          },
+          "H26": {
+            "value": "21.5",
+            "formula": "21.5",
+            "computed": 21.5
+          },
+          "H27": {
+            "value": "15.5",
+            "formula": "15.5",
+            "computed": 15.5
+          },
+          "J24": {
+            "value": "100",
+            "formula": "100",
+            "computed": 100
+          },
+          "K24": {
+            "value": "60",
+            "formula": "60",
+            "computed": 60
+          },
+          "L24": {
+            "value": "100",
+            "formula": "100",
+            "computed": 100
+          },
+          "A24": {
+            "value": "500",
+            "formula": "500",
+            "computed": 500
+          },
+          "I5": {
+            "value": "5",
+            "formula": "5",
+            "computed": 5,
+            "materialTag": "MO"
+          },
+          "J5": {
+            "value": "4",
+            "formula": "4",
+            "computed": 4,
+            "materialTag": "MD"
+          },
+          "B48": {
+            "value": "Item",
+            "formula": "Item",
+            "computed": "Item"
+          },
+          "C48": {
+            "value": "Descripcion",
+            "formula": "Descripcion",
+            "computed": "Descripcion"
+          },
+          "D48": {
+            "value": "UM",
+            "formula": "UM",
+            "computed": "UM"
+          },
+          "E48": {
+            "value": "Otros",
+            "formula": "Otros",
+            "computed": "Otros"
+          },
+          "B49": {
+            "value": "240",
+            "formula": "240",
+            "computed": 240
+          },
+          "B50": {
+            "value": "4102",
+            "formula": "4102",
+            "computed": 4102
+          },
+          "C49": {
+            "value": "Fibra de 2 mm",
+            "formula": "Fibra de 2 mm",
+            "computed": "Fibra de 2 mm"
+          },
+          "C50": {
+            "value": "Papel",
+            "formula": "Papel",
+            "computed": "Papel"
+          },
+          "D49": {
+            "value": "KLS",
+            "formula": "KLS",
+            "computed": "KLS"
+          },
+          "D50": {
+            "value": "KLS",
+            "formula": "KLS",
+            "computed": "KLS"
+          },
+          "G48": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "H48": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "G49": {
+            "value": "Aislamiento",
+            "formula": "Aislamiento",
+            "computed": "Aislamiento"
+          },
+          "H49": {
+            "value": "2",
+            "formula": "2",
+            "computed": 2
+          },
+          "G50": {
+            "value": "Prueba",
+            "formula": "Prueba",
+            "computed": "Prueba"
+          },
+          "H50": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "K48": {
+            "value": "Material Devanado",
+            "formula": "Material Devanado",
+            "computed": "Material Devanado"
+          },
+          "L48": {
+            "value": "Aluminio",
+            "formula": "Aluminio",
+            "computed": "Aluminio"
+          },
+          "K49": {
+            "value": "Tipo Conducto",
+            "formula": "Tipo Conducto",
+            "computed": "Tipo Conducto"
+          },
+          "L49": {
+            "value": "Rectangular",
+            "formula": "Rectangular",
+            "computed": "Rectangular"
+          },
+          "K50": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "L50": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3,
+            "catalogConditionCells": [
+              "L48",
+              "L49"
+            ],
+            "itemLink": {
+              "catalogSheetId": "design-sheet1",
+              "catalogTableId": "ict-1787939997868",
+              "itemId": "NO-EXISTE"
+            }
+          }
+        },
+        "columnWidths": {
+          "2": 153,
+          "3": 130
+        },
+        "rowHeights": {},
+        "templateHiddenRows": [],
+        "templateHiddenColumns": [],
+        "userHiddenRows": [],
+        "userHiddenColumns": [],
+        "hiddenCells": [],
+        "freezeRow": 0,
+        "freezeColumn": 0,
+        "mergedCells": [
+          {
+            "startCell": "B9",
+            "endCell": "D13",
+            "rowSpan": 5,
+            "colSpan": 3
+          },
+          {
+            "startCell": "F9",
+            "endCell": "I22",
+            "rowSpan": 14,
+            "colSpan": 4
+          },
+          {
+            "startCell": "K9",
+            "endCell": "N22",
+            "rowSpan": 14,
+            "colSpan": 4
+          },
+          {
+            "startCell": "P9",
+            "endCell": "R21",
+            "rowSpan": 13,
+            "colSpan": 3
+          },
+          {
+            "startCell": "F33",
+            "endCell": "J46",
+            "rowSpan": 14,
+            "colSpan": 5
+          }
+        ],
+        "namedRanges": [],
+        "semiFinishedZones": [
+          {
+            "id": "sfz-1787940063897",
+            "semiFinishedId": 1,
+            "semiFinishedCode": "BOBINA",
+            "semiFinishedName": "Bobina",
+            "startCell": "G48",
+            "endCell": "H50"
+          },
+          {
+            "id": "sfz-1787940256929",
+            "semiFinishedId": 1,
+            "semiFinishedCode": "BOBINA",
+            "semiFinishedName": "Bobina",
+            "startCell": "L50",
+            "endCell": "L50"
+          }
+        ],
+        "itemCatalogTables": [
+          {
+            "id": "ict-1787939997868",
+            "name": "Catálogo Alambres",
+            "tags": [
+              "aluminio",
+              "rectangular"
+            ],
+            "startCell": "B48",
+            "endCell": "D50",
+            "headerRows": 1,
+            "idColumnOffset": 0,
+            "descriptionColumnOffset": 1,
+            "umColumnOffset": 2
+          }
+        ]
+      }
+    ],
+    "expanded": [
+      10
+    ],
+    "bom": {
+      "nodes": [
+        {
+          "id": 30,
+          "semiFinished": {
+            "id": 3,
+            "name": "SF 3",
+            "code": "SF3",
+            "createdAt": "",
+            "updatedAt": "",
+            "deletedAt": null
+          },
+          "type": "STANDARD",
+          "parentId": null,
+          "children": [
+            {
+              "id": 10,
+              "semiFinished": {
+                "id": 1,
+                "name": "SF 1",
+                "code": "SF1",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            },
+            {
+              "id": 40,
+              "semiFinished": {
+                "id": 4,
+                "name": "SF 4",
+                "code": "SF4",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "element": {
+      "values": "[{\"key\":\"power\",\"value\":25},{\"key\":\"accesories\",\"value\":\"[{\\\"id\\\":501,\\\"reference\\\":\\\"ACC-1\\\",\\\"description\\\":\\\"Pasatapas\\\",\\\"unitOfMeasurement\\\":\\\"UND\\\",\\\"value\\\":3,\\\"semiFinished\\\":{\\\"id\\\":1,\\\"name\\\":\\\"SF 1\\\"}},{\\\"id\\\":502,\\\"reference\\\":\\\"ACC-2\\\",\\\"description\\\":\\\"Placa\\\",\\\"unitMeasurement\\\":\\\"UND\\\",\\\"value\\\":1,\\\"semiFinished\\\":{\\\"id\\\":3,\\\"name\\\":\\\"SF 3\\\"}}]\"}]"
+    },
+    "cells": {
+      "A1": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "bold": true
+      },
+      "B1": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B2": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C2": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D2": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E2": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F2": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G2": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H2": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I2": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "B3": {
+        "value": "NO-EXISTE",
+        "formula": "NO-EXISTE",
+        "computed": "NO-EXISTE"
+      },
+      "C3": {
+        "value": "(item no encontrado)",
+        "formula": "(item no encontrado)",
+        "computed": "(item no encontrado)"
+      },
+      "D3": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3"
+      },
+      "E3": {
+        "value": "",
+        "formula": "",
+        "computed": ""
+      },
+      "B4": {
+        "value": "501",
+        "formula": "501",
+        "computed": "501"
+      },
+      "C4": {
+        "value": "Pasatapas",
+        "formula": "Pasatapas",
+        "computed": "Pasatapas"
+      },
+      "D4": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3"
+      },
+      "E4": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F4": {
+        "value": "ACC-1",
+        "formula": "ACC-1",
+        "computed": "ACC-1"
+      },
+      "I4": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      },
+      "A6": {
+        "value": "4",
+        "formula": "4",
+        "computed": "4",
+        "bold": true
+      },
+      "B6": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B7": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C7": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D7": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E7": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F7": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G7": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H7": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I7": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A9": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "bold": true
+      },
+      "B9": {
+        "value": "Semielaborado : SF 3",
+        "formula": "Semielaborado : SF 3",
+        "computed": "Semielaborado : SF 3",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B10": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C10": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D10": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E10": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F10": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G10": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H10": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I10": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A11": {
+        "value": "▼",
+        "formula": "▼",
+        "computed": "▼",
+        "bomToggleNodeId": 10,
+        "backgroundColor": "#fed7aa"
+      },
+      "B11": {
+        "value": "SF1",
+        "formula": "SF1",
+        "computed": "SF1",
+        "backgroundColor": "#fed7aa"
+      },
+      "C11": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "backgroundColor": "#fed7aa"
+      },
+      "D11": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E11": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "B12": {
+        "value": "NO-EXISTE",
+        "formula": "NO-EXISTE",
+        "computed": "NO-EXISTE",
+        "backgroundColor": "#fff7ed"
+      },
+      "C12": {
+        "value": "(item no encontrado)",
+        "formula": "(item no encontrado)",
+        "computed": "(item no encontrado)",
+        "backgroundColor": "#fff7ed"
+      },
+      "D12": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "backgroundColor": "#fff7ed"
+      },
+      "E12": {
+        "value": "",
+        "formula": "",
+        "computed": "",
+        "backgroundColor": "#fff7ed"
+      },
+      "B13": {
+        "value": "501",
+        "formula": "501",
+        "computed": "501",
+        "backgroundColor": "#fff7ed"
+      },
+      "C13": {
+        "value": "Pasatapas",
+        "formula": "Pasatapas",
+        "computed": "Pasatapas",
+        "backgroundColor": "#fff7ed"
+      },
+      "D13": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "backgroundColor": "#fff7ed"
+      },
+      "E13": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fff7ed"
+      },
+      "F13": {
+        "value": "ACC-1",
+        "formula": "ACC-1",
+        "computed": "ACC-1",
+        "backgroundColor": "#fff7ed"
+      },
+      "I13": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma",
+        "backgroundColor": "#fff7ed"
+      },
+      "A14": {
+        "value": "▶",
+        "formula": "▶",
+        "computed": "▶",
+        "bomToggleNodeId": 40,
+        "backgroundColor": "#fed7aa"
+      },
+      "B14": {
+        "value": "SF4",
+        "formula": "SF4",
+        "computed": "SF4",
+        "backgroundColor": "#fed7aa"
+      },
+      "C14": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "backgroundColor": "#fed7aa"
+      },
+      "D14": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E14": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "B15": {
+        "value": "502",
+        "formula": "502",
+        "computed": "502"
+      },
+      "C15": {
+        "value": "Placa",
+        "formula": "Placa",
+        "computed": "Placa"
+      },
+      "D15": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1"
+      },
+      "E15": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F15": {
+        "value": "ACC-2",
+        "formula": "ACC-2",
+        "computed": "ACC-2"
+      },
+      "I15": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      }
+    }
+  },
+  "catálogo borrado": {
+    "sheets": [
+      {
+        "id": "design-sheet1",
+        "name": "Hoja1",
+        "cells": {
+          "B2": {
+            "value": "sdasd",
+            "formula": "sdasd",
+            "computed": "sdasd",
+            "bold": true,
+            "textColor": "#c01111",
+            "border": "1px solid #000"
+          },
+          "B3": {
+            "value": "asdasd",
+            "formula": "asdasd",
+            "computed": "asdasd",
+            "bold": false,
+            "textColor": "#360808",
+            "border": "1px solid #000"
+          },
+          "C3": {
+            "value": "asdasd",
+            "formula": "asdasd",
+            "computed": "asdasd",
+            "backgroundColor": "#a70606",
+            "border": "1px solid #000"
+          },
+          "D3": {
+            "value": "=4*6",
+            "formula": "=4*6",
+            "computed": 24,
+            "border": "1px solid #000"
+          },
+          "D4": {
+            "value": "mkdfg",
+            "formula": "mkdfg",
+            "computed": "mkdfg",
+            "border": "1px solid #000"
+          },
+          "C2": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "D2": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "B4": {
+            "value": "prueba",
+            "formula": "prueba",
+            "computed": "prueba",
+            "bold": true,
+            "textColor": "#0de338",
+            "border": "1px solid #000"
+          },
+          "C4": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "D7": {
+            "value": "=QUADRATIC(5)",
+            "formula": "=QUADRATIC(5)",
+            "computed": 34
+          },
+          "E6": {
+            "value": "=5*5",
+            "formula": "=5*5",
+            "computed": 25
+          },
+          "B9": {
+            "value": "DRAW:FRONTAL:NUCLEO:B6,C6",
+            "formula": "DRAW:FRONTAL:NUCLEO:B6,C6",
+            "computed": "DRAW:FRONTAL:NUCLEO:B6,C6"
+          },
+          "B6": {
+            "value": "340",
+            "formula": "340",
+            "computed": 340
+          },
+          "C6": {
+            "value": "340",
+            "formula": "340",
+            "computed": 340
+          },
+          "F6": {
+            "value": "320",
+            "formula": "320",
+            "computed": 320
+          },
+          "F9": {
+            "value": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55",
+            "formula": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55",
+            "computed": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55"
+          },
+          "K9": {
+            "value": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55",
+            "formula": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55",
+            "computed": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55"
+          },
+          "P9": {
+            "value": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55",
+            "formula": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55",
+            "computed": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55"
+          },
+          "F33": {
+            "value": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24",
+            "formula": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24",
+            "computed": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24"
+          },
+          "H59": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H60": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H61": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H62": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q59": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q60": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q61": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q62": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "D27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "E27": {
+            "value": "200",
+            "formula": "200",
+            "computed": 200
+          },
+          "B24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "C24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "B25": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "B26": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "B27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "C25": {
+            "value": "260",
+            "formula": "260",
+            "computed": 260
+          },
+          "C26": {
+            "value": "230",
+            "formula": "230",
+            "computed": 230
+          },
+          "C27": {
+            "value": "200",
+            "formula": "200",
+            "computed": 200
+          },
+          "E24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "E25": {
+            "value": "260",
+            "formula": "260",
+            "computed": 260
+          },
+          "E26": {
+            "value": "230",
+            "formula": "230",
+            "computed": 230
+          },
+          "G24": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "G25": {
+            "value": "74.8",
+            "formula": "74.8",
+            "computed": 74.8
+          },
+          "G26": {
+            "value": "10.1",
+            "formula": "10.1",
+            "computed": 10.1
+          },
+          "G27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H24": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H25": {
+            "value": "74.8",
+            "formula": "74.8",
+            "computed": 74.8
+          },
+          "H26": {
+            "value": "21.5",
+            "formula": "21.5",
+            "computed": 21.5
+          },
+          "H27": {
+            "value": "15.5",
+            "formula": "15.5",
+            "computed": 15.5
+          },
+          "J24": {
+            "value": "100",
+            "formula": "100",
+            "computed": 100
+          },
+          "K24": {
+            "value": "60",
+            "formula": "60",
+            "computed": 60
+          },
+          "L24": {
+            "value": "100",
+            "formula": "100",
+            "computed": 100
+          },
+          "A24": {
+            "value": "500",
+            "formula": "500",
+            "computed": 500
+          },
+          "I5": {
+            "value": "5",
+            "formula": "5",
+            "computed": 5,
+            "materialTag": "MO"
+          },
+          "J5": {
+            "value": "4",
+            "formula": "4",
+            "computed": 4,
+            "materialTag": "MD"
+          },
+          "B48": {
+            "value": "Item",
+            "formula": "Item",
+            "computed": "Item"
+          },
+          "C48": {
+            "value": "Descripcion",
+            "formula": "Descripcion",
+            "computed": "Descripcion"
+          },
+          "D48": {
+            "value": "UM",
+            "formula": "UM",
+            "computed": "UM"
+          },
+          "E48": {
+            "value": "Otros",
+            "formula": "Otros",
+            "computed": "Otros"
+          },
+          "B49": {
+            "value": "240",
+            "formula": "240",
+            "computed": 240
+          },
+          "B50": {
+            "value": "4102",
+            "formula": "4102",
+            "computed": 4102
+          },
+          "C49": {
+            "value": "Fibra de 2 mm",
+            "formula": "Fibra de 2 mm",
+            "computed": "Fibra de 2 mm"
+          },
+          "C50": {
+            "value": "Papel",
+            "formula": "Papel",
+            "computed": "Papel"
+          },
+          "D49": {
+            "value": "KLS",
+            "formula": "KLS",
+            "computed": "KLS"
+          },
+          "D50": {
+            "value": "KLS",
+            "formula": "KLS",
+            "computed": "KLS"
+          },
+          "G48": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "H48": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "G49": {
+            "value": "Aislamiento",
+            "formula": "Aislamiento",
+            "computed": "Aislamiento"
+          },
+          "H49": {
+            "value": "2",
+            "formula": "2",
+            "computed": 2
+          },
+          "G50": {
+            "value": "Prueba",
+            "formula": "Prueba",
+            "computed": "Prueba"
+          },
+          "H50": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "K48": {
+            "value": "Material Devanado",
+            "formula": "Material Devanado",
+            "computed": "Material Devanado"
+          },
+          "L48": {
+            "value": "Aluminio",
+            "formula": "Aluminio",
+            "computed": "Aluminio"
+          },
+          "K49": {
+            "value": "Tipo Conducto",
+            "formula": "Tipo Conducto",
+            "computed": "Tipo Conducto"
+          },
+          "L49": {
+            "value": "Rectangular",
+            "formula": "Rectangular",
+            "computed": "Rectangular"
+          },
+          "K50": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "L50": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3,
+            "catalogConditionCells": [
+              "L48",
+              "L49"
+            ],
+            "itemLink": {
+              "catalogSheetId": "design-sheet1",
+              "catalogTableId": "ict-1787939997868",
+              "itemId": "NO-EXISTE"
+            }
+          }
+        },
+        "columnWidths": {
+          "2": 153,
+          "3": 130
+        },
+        "rowHeights": {},
+        "templateHiddenRows": [],
+        "templateHiddenColumns": [],
+        "userHiddenRows": [],
+        "userHiddenColumns": [],
+        "hiddenCells": [],
+        "freezeRow": 0,
+        "freezeColumn": 0,
+        "mergedCells": [
+          {
+            "startCell": "B9",
+            "endCell": "D13",
+            "rowSpan": 5,
+            "colSpan": 3
+          },
+          {
+            "startCell": "F9",
+            "endCell": "I22",
+            "rowSpan": 14,
+            "colSpan": 4
+          },
+          {
+            "startCell": "K9",
+            "endCell": "N22",
+            "rowSpan": 14,
+            "colSpan": 4
+          },
+          {
+            "startCell": "P9",
+            "endCell": "R21",
+            "rowSpan": 13,
+            "colSpan": 3
+          },
+          {
+            "startCell": "F33",
+            "endCell": "J46",
+            "rowSpan": 14,
+            "colSpan": 5
+          }
+        ],
+        "namedRanges": [],
+        "semiFinishedZones": [
+          {
+            "id": "sfz-1787940063897",
+            "semiFinishedId": 1,
+            "semiFinishedCode": "BOBINA",
+            "semiFinishedName": "Bobina",
+            "startCell": "G48",
+            "endCell": "H50"
+          },
+          {
+            "id": "sfz-1787940256929",
+            "semiFinishedId": 1,
+            "semiFinishedCode": "BOBINA",
+            "semiFinishedName": "Bobina",
+            "startCell": "L50",
+            "endCell": "L50"
+          }
+        ],
+        "itemCatalogTables": []
+      }
+    ],
+    "expanded": [
+      10
+    ],
+    "bom": {
+      "nodes": [
+        {
+          "id": 30,
+          "semiFinished": {
+            "id": 3,
+            "name": "SF 3",
+            "code": "SF3",
+            "createdAt": "",
+            "updatedAt": "",
+            "deletedAt": null
+          },
+          "type": "STANDARD",
+          "parentId": null,
+          "children": [
+            {
+              "id": 10,
+              "semiFinished": {
+                "id": 1,
+                "name": "SF 1",
+                "code": "SF1",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            },
+            {
+              "id": 40,
+              "semiFinished": {
+                "id": 4,
+                "name": "SF 4",
+                "code": "SF4",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "element": {
+      "values": "[{\"key\":\"power\",\"value\":25},{\"key\":\"accesories\",\"value\":\"[{\\\"id\\\":501,\\\"reference\\\":\\\"ACC-1\\\",\\\"description\\\":\\\"Pasatapas\\\",\\\"unitOfMeasurement\\\":\\\"UND\\\",\\\"value\\\":3,\\\"semiFinished\\\":{\\\"id\\\":1,\\\"name\\\":\\\"SF 1\\\"}},{\\\"id\\\":502,\\\"reference\\\":\\\"ACC-2\\\",\\\"description\\\":\\\"Placa\\\",\\\"unitMeasurement\\\":\\\"UND\\\",\\\"value\\\":1,\\\"semiFinished\\\":{\\\"id\\\":3,\\\"name\\\":\\\"SF 3\\\"}}]\"}]"
+    },
+    "cells": {
+      "A1": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "bold": true
+      },
+      "B1": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B2": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C2": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D2": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E2": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F2": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G2": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H2": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I2": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "B3": {
+        "value": "NO-EXISTE",
+        "formula": "NO-EXISTE",
+        "computed": "NO-EXISTE"
+      },
+      "C3": {
+        "value": "(catálogo borrado)",
+        "formula": "(catálogo borrado)",
+        "computed": "(catálogo borrado)"
+      },
+      "D3": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3"
+      },
+      "E3": {
+        "value": "",
+        "formula": "",
+        "computed": ""
+      },
+      "B4": {
+        "value": "501",
+        "formula": "501",
+        "computed": "501"
+      },
+      "C4": {
+        "value": "Pasatapas",
+        "formula": "Pasatapas",
+        "computed": "Pasatapas"
+      },
+      "D4": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3"
+      },
+      "E4": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F4": {
+        "value": "ACC-1",
+        "formula": "ACC-1",
+        "computed": "ACC-1"
+      },
+      "I4": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      },
+      "A6": {
+        "value": "4",
+        "formula": "4",
+        "computed": "4",
+        "bold": true
+      },
+      "B6": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B7": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C7": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D7": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E7": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F7": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G7": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H7": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I7": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A9": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "bold": true
+      },
+      "B9": {
+        "value": "Semielaborado : SF 3",
+        "formula": "Semielaborado : SF 3",
+        "computed": "Semielaborado : SF 3",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B10": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C10": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D10": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E10": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F10": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G10": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H10": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I10": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A11": {
+        "value": "▼",
+        "formula": "▼",
+        "computed": "▼",
+        "bomToggleNodeId": 10,
+        "backgroundColor": "#fed7aa"
+      },
+      "B11": {
+        "value": "SF1",
+        "formula": "SF1",
+        "computed": "SF1",
+        "backgroundColor": "#fed7aa"
+      },
+      "C11": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "backgroundColor": "#fed7aa"
+      },
+      "D11": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E11": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "B12": {
+        "value": "NO-EXISTE",
+        "formula": "NO-EXISTE",
+        "computed": "NO-EXISTE",
+        "backgroundColor": "#fff7ed"
+      },
+      "C12": {
+        "value": "(catálogo borrado)",
+        "formula": "(catálogo borrado)",
+        "computed": "(catálogo borrado)",
+        "backgroundColor": "#fff7ed"
+      },
+      "D12": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "backgroundColor": "#fff7ed"
+      },
+      "E12": {
+        "value": "",
+        "formula": "",
+        "computed": "",
+        "backgroundColor": "#fff7ed"
+      },
+      "B13": {
+        "value": "501",
+        "formula": "501",
+        "computed": "501",
+        "backgroundColor": "#fff7ed"
+      },
+      "C13": {
+        "value": "Pasatapas",
+        "formula": "Pasatapas",
+        "computed": "Pasatapas",
+        "backgroundColor": "#fff7ed"
+      },
+      "D13": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "backgroundColor": "#fff7ed"
+      },
+      "E13": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fff7ed"
+      },
+      "F13": {
+        "value": "ACC-1",
+        "formula": "ACC-1",
+        "computed": "ACC-1",
+        "backgroundColor": "#fff7ed"
+      },
+      "I13": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma",
+        "backgroundColor": "#fff7ed"
+      },
+      "A14": {
+        "value": "▶",
+        "formula": "▶",
+        "computed": "▶",
+        "bomToggleNodeId": 40,
+        "backgroundColor": "#fed7aa"
+      },
+      "B14": {
+        "value": "SF4",
+        "formula": "SF4",
+        "computed": "SF4",
+        "backgroundColor": "#fed7aa"
+      },
+      "C14": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "backgroundColor": "#fed7aa"
+      },
+      "D14": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E14": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "B15": {
+        "value": "502",
+        "formula": "502",
+        "computed": "502"
+      },
+      "C15": {
+        "value": "Placa",
+        "formula": "Placa",
+        "computed": "Placa"
+      },
+      "D15": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1"
+      },
+      "E15": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F15": {
+        "value": "ACC-2",
+        "formula": "ACC-2",
+        "computed": "ACC-2"
+      },
+      "I15": {
+        "value": "sin costos en la norma",
+        "formula": "sin costos en la norma",
+        "computed": "sin costos en la norma"
+      }
+    }
+  },
+  "accesorios de la norma": {
+    "sheets": [
+      {
+        "id": "design-sheet1",
+        "name": "Hoja1",
+        "cells": {
+          "B2": {
+            "value": "sdasd",
+            "formula": "sdasd",
+            "computed": "sdasd",
+            "bold": true,
+            "textColor": "#c01111",
+            "border": "1px solid #000"
+          },
+          "B3": {
+            "value": "asdasd",
+            "formula": "asdasd",
+            "computed": "asdasd",
+            "bold": false,
+            "textColor": "#360808",
+            "border": "1px solid #000"
+          },
+          "C3": {
+            "value": "asdasd",
+            "formula": "asdasd",
+            "computed": "asdasd",
+            "backgroundColor": "#a70606",
+            "border": "1px solid #000"
+          },
+          "D3": {
+            "value": "=4*6",
+            "formula": "=4*6",
+            "computed": 24,
+            "border": "1px solid #000"
+          },
+          "D4": {
+            "value": "mkdfg",
+            "formula": "mkdfg",
+            "computed": "mkdfg",
+            "border": "1px solid #000"
+          },
+          "C2": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "D2": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "B4": {
+            "value": "prueba",
+            "formula": "prueba",
+            "computed": "prueba",
+            "bold": true,
+            "textColor": "#0de338",
+            "border": "1px solid #000"
+          },
+          "C4": {
+            "value": "",
+            "formula": "",
+            "computed": "",
+            "border": "1px solid #000"
+          },
+          "D7": {
+            "value": "=QUADRATIC(5)",
+            "formula": "=QUADRATIC(5)",
+            "computed": 34
+          },
+          "E6": {
+            "value": "=5*5",
+            "formula": "=5*5",
+            "computed": 25
+          },
+          "B9": {
+            "value": "DRAW:FRONTAL:NUCLEO:B6,C6",
+            "formula": "DRAW:FRONTAL:NUCLEO:B6,C6",
+            "computed": "DRAW:FRONTAL:NUCLEO:B6,C6"
+          },
+          "B6": {
+            "value": "340",
+            "formula": "340",
+            "computed": 340
+          },
+          "C6": {
+            "value": "340",
+            "formula": "340",
+            "computed": 340
+          },
+          "F6": {
+            "value": "320",
+            "formula": "320",
+            "computed": 320
+          },
+          "F9": {
+            "value": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55",
+            "formula": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55",
+            "computed": "DRAW:SUPERIOR:NUCLEO,BOBINA:,H54:S55"
+          },
+          "K9": {
+            "value": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55",
+            "formula": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55",
+            "computed": " DRAW:FRONTAL:TANQUE,NUCLEO,BOBINA:H53,H54::AD53,AD55"
+          },
+          "P9": {
+            "value": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55",
+            "formula": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55",
+            "computed": "DRAW:SUPERIOR:TANQUE,NUCLEO,BOBINA:,H54:S55:,AD55"
+          },
+          "F33": {
+            "value": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24",
+            "formula": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24",
+            "computed": " DRAW:BOBINADO:B24:C24,C25,C26,C27:E24,E25,E26,E27:G24,G25,G26,G27:H24,H25,H26,H27:A24:J24:K24:L24"
+          },
+          "H59": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H60": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H61": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H62": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q59": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q60": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q61": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "Q62": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "D27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "E27": {
+            "value": "200",
+            "formula": "200",
+            "computed": 200
+          },
+          "B24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "C24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "B25": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "B26": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "B27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "C25": {
+            "value": "260",
+            "formula": "260",
+            "computed": 260
+          },
+          "C26": {
+            "value": "230",
+            "formula": "230",
+            "computed": 230
+          },
+          "C27": {
+            "value": "200",
+            "formula": "200",
+            "computed": 200
+          },
+          "E24": {
+            "value": "300",
+            "formula": "300",
+            "computed": 300
+          },
+          "E25": {
+            "value": "260",
+            "formula": "260",
+            "computed": 260
+          },
+          "E26": {
+            "value": "230",
+            "formula": "230",
+            "computed": 230
+          },
+          "G24": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "G25": {
+            "value": "74.8",
+            "formula": "74.8",
+            "computed": 74.8
+          },
+          "G26": {
+            "value": "10.1",
+            "formula": "10.1",
+            "computed": 10.1
+          },
+          "G27": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H24": {
+            "value": "",
+            "formula": "",
+            "computed": ""
+          },
+          "H25": {
+            "value": "74.8",
+            "formula": "74.8",
+            "computed": 74.8
+          },
+          "H26": {
+            "value": "21.5",
+            "formula": "21.5",
+            "computed": 21.5
+          },
+          "H27": {
+            "value": "15.5",
+            "formula": "15.5",
+            "computed": 15.5
+          },
+          "J24": {
+            "value": "100",
+            "formula": "100",
+            "computed": 100
+          },
+          "K24": {
+            "value": "60",
+            "formula": "60",
+            "computed": 60
+          },
+          "L24": {
+            "value": "100",
+            "formula": "100",
+            "computed": 100
+          },
+          "A24": {
+            "value": "500",
+            "formula": "500",
+            "computed": 500
+          },
+          "I5": {
+            "value": "5",
+            "formula": "5",
+            "computed": 5,
+            "materialTag": "MO"
+          },
+          "J5": {
+            "value": "4",
+            "formula": "4",
+            "computed": 4,
+            "materialTag": "MD"
+          },
+          "B48": {
+            "value": "Item",
+            "formula": "Item",
+            "computed": "Item"
+          },
+          "C48": {
+            "value": "Descripcion",
+            "formula": "Descripcion",
+            "computed": "Descripcion"
+          },
+          "D48": {
+            "value": "UM",
+            "formula": "UM",
+            "computed": "UM"
+          },
+          "E48": {
+            "value": "Otros",
+            "formula": "Otros",
+            "computed": "Otros"
+          },
+          "B49": {
+            "value": "240",
+            "formula": "240",
+            "computed": 240
+          },
+          "B50": {
+            "value": "4102",
+            "formula": "4102",
+            "computed": 4102
+          },
+          "C49": {
+            "value": "Fibra de 2 mm",
+            "formula": "Fibra de 2 mm",
+            "computed": "Fibra de 2 mm"
+          },
+          "C50": {
+            "value": "Papel",
+            "formula": "Papel",
+            "computed": "Papel"
+          },
+          "D49": {
+            "value": "KLS",
+            "formula": "KLS",
+            "computed": "KLS"
+          },
+          "D50": {
+            "value": "KLS",
+            "formula": "KLS",
+            "computed": "KLS"
+          },
+          "G48": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "H48": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "G49": {
+            "value": "Aislamiento",
+            "formula": "Aislamiento",
+            "computed": "Aislamiento"
+          },
+          "H49": {
+            "value": "2",
+            "formula": "2",
+            "computed": 2
+          },
+          "G50": {
+            "value": "Prueba",
+            "formula": "Prueba",
+            "computed": "Prueba"
+          },
+          "H50": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3
+          },
+          "K48": {
+            "value": "Material Devanado",
+            "formula": "Material Devanado",
+            "computed": "Material Devanado"
+          },
+          "L48": {
+            "value": "Aluminio",
+            "formula": "Aluminio",
+            "computed": "Aluminio"
+          },
+          "K49": {
+            "value": "Tipo Conducto",
+            "formula": "Tipo Conducto",
+            "computed": "Tipo Conducto"
+          },
+          "L49": {
+            "value": "Rectangular",
+            "formula": "Rectangular",
+            "computed": "Rectangular"
+          },
+          "K50": {
+            "value": "Espesor",
+            "formula": "Espesor",
+            "computed": "Espesor"
+          },
+          "L50": {
+            "value": "3",
+            "formula": "3",
+            "computed": 3,
+            "catalogConditionCells": [
+              "L48",
+              "L49"
+            ],
+            "itemLink": {
+              "catalogSheetId": "design-sheet1",
+              "catalogTableId": "ict-1787939997868",
+              "itemId": "240"
+            }
+          }
+        },
+        "columnWidths": {
+          "2": 153,
+          "3": 130
+        },
+        "rowHeights": {},
+        "templateHiddenRows": [],
+        "templateHiddenColumns": [],
+        "userHiddenRows": [],
+        "userHiddenColumns": [],
+        "hiddenCells": [],
+        "freezeRow": 0,
+        "freezeColumn": 0,
+        "mergedCells": [
+          {
+            "startCell": "B9",
+            "endCell": "D13",
+            "rowSpan": 5,
+            "colSpan": 3
+          },
+          {
+            "startCell": "F9",
+            "endCell": "I22",
+            "rowSpan": 14,
+            "colSpan": 4
+          },
+          {
+            "startCell": "K9",
+            "endCell": "N22",
+            "rowSpan": 14,
+            "colSpan": 4
+          },
+          {
+            "startCell": "P9",
+            "endCell": "R21",
+            "rowSpan": 13,
+            "colSpan": 3
+          },
+          {
+            "startCell": "F33",
+            "endCell": "J46",
+            "rowSpan": 14,
+            "colSpan": 5
+          }
+        ],
+        "namedRanges": [],
+        "semiFinishedZones": [
+          {
+            "id": "sfz-1787940063897",
+            "semiFinishedId": 1,
+            "semiFinishedCode": "BOBINA",
+            "semiFinishedName": "Bobina",
+            "startCell": "G48",
+            "endCell": "H50"
+          },
+          {
+            "id": "sfz-1787940256929",
+            "semiFinishedId": 1,
+            "semiFinishedCode": "BOBINA",
+            "semiFinishedName": "Bobina",
+            "startCell": "L50",
+            "endCell": "L50"
+          }
+        ],
+        "itemCatalogTables": [
+          {
+            "id": "ict-1787939997868",
+            "name": "Catálogo Alambres",
+            "tags": [
+              "aluminio",
+              "rectangular"
+            ],
+            "startCell": "B48",
+            "endCell": "D50",
+            "headerRows": 1,
+            "idColumnOffset": 0,
+            "descriptionColumnOffset": 1,
+            "umColumnOffset": 2
+          }
+        ]
+      }
+    ],
+    "expanded": [],
+    "bom": {
+      "nodes": [
+        {
+          "id": 30,
+          "semiFinished": {
+            "id": 3,
+            "name": "SF 3",
+            "code": "SF3",
+            "createdAt": "",
+            "updatedAt": "",
+            "deletedAt": null
+          },
+          "type": "STANDARD",
+          "parentId": null,
+          "children": [
+            {
+              "id": 10,
+              "semiFinished": {
+                "id": 1,
+                "name": "SF 1",
+                "code": "SF1",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            },
+            {
+              "id": 40,
+              "semiFinished": {
+                "id": 4,
+                "name": "SF 4",
+                "code": "SF4",
+                "createdAt": "",
+                "updatedAt": "",
+                "deletedAt": null
+              },
+              "type": "STANDARD",
+              "parentId": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "element": {
+      "values": "[{\"key\":\"power\",\"value\":25},{\"key\":\"accesories\",\"value\":\"[{\\\"id\\\":601,\\\"reference\\\":\\\"06010504\\\",\\\"description\\\":\\\"Indicador nivel aceite con contactos\\\",\\\"unitOfMeasurement\\\":\\\"UND\\\",\\\"averageCost\\\":29552.27,\\\"lastCost\\\":29552.27,\\\"value\\\":2,\\\"semiFinished\\\":{\\\"id\\\":1,\\\"name\\\":\\\"SF 1\\\"}},{\\\"id\\\":602,\\\"reference\\\":\\\"06010505\\\",\\\"description\\\":\\\"Válvula de drenaje\\\",\\\"semiFinished\\\":{\\\"id\\\":1,\\\"name\\\":\\\"SF 1\\\"}},{\\\"id\\\":603,\\\"reference\\\":\\\"06010506\\\",\\\"description\\\":\\\"Placa de características\\\",\\\"unitMeasurement\\\":\\\"UND\\\",\\\"averageCost\\\":0,\\\"lastCost\\\":1200.5,\\\"value\\\":0,\\\"semiFinished\\\":{\\\"id\\\":1,\\\"name\\\":\\\"SF 1\\\"}}]\"}]"
+    },
+    "cells": {
+      "A1": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "bold": true
+      },
+      "B1": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B2": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C2": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D2": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E2": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F2": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G2": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H2": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I2": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "B3": {
+        "value": "240",
+        "formula": "240",
+        "computed": "240"
+      },
+      "C3": {
+        "value": "Fibra de 2 mm",
+        "formula": "Fibra de 2 mm",
+        "computed": "Fibra de 2 mm"
+      },
+      "D3": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3"
+      },
+      "E3": {
+        "value": "KLS",
+        "formula": "KLS",
+        "computed": "KLS"
+      },
+      "B4": {
+        "value": "601",
+        "formula": "601",
+        "computed": "601"
+      },
+      "C4": {
+        "value": "Indicador nivel aceite con contactos",
+        "formula": "Indicador nivel aceite con contactos",
+        "computed": "Indicador nivel aceite con contactos"
+      },
+      "D4": {
+        "value": "2",
+        "formula": "2",
+        "computed": "2"
+      },
+      "E4": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F4": {
+        "value": "06010504",
+        "formula": "06010504",
+        "computed": "06010504"
+      },
+      "G4": {
+        "value": "29552.27",
+        "formula": "29552.27",
+        "computed": "29552.27"
+      },
+      "H4": {
+        "value": "29552.27",
+        "formula": "29552.27",
+        "computed": "29552.27"
+      },
+      "B5": {
+        "value": "602",
+        "formula": "602",
+        "computed": "602"
+      },
+      "C5": {
+        "value": "Válvula de drenaje",
+        "formula": "Válvula de drenaje",
+        "computed": "Válvula de drenaje"
+      },
+      "D5": {
+        "value": "",
+        "formula": "",
+        "computed": ""
+      },
+      "E5": {
+        "value": "",
+        "formula": "",
+        "computed": ""
+      },
+      "F5": {
+        "value": "06010505",
+        "formula": "06010505",
+        "computed": "06010505"
+      },
+      "I5": {
+        "value": "sin cantidad en la norma; sin unidad en la norma; sin costos en la norma",
+        "formula": "sin cantidad en la norma; sin unidad en la norma; sin costos en la norma",
+        "computed": "sin cantidad en la norma; sin unidad en la norma; sin costos en la norma"
+      },
+      "B6": {
+        "value": "603",
+        "formula": "603",
+        "computed": "603"
+      },
+      "C6": {
+        "value": "Placa de características",
+        "formula": "Placa de características",
+        "computed": "Placa de características"
+      },
+      "D6": {
+        "value": "0",
+        "formula": "0",
+        "computed": "0"
+      },
+      "E6": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND"
+      },
+      "F6": {
+        "value": "06010506",
+        "formula": "06010506",
+        "computed": "06010506"
+      },
+      "G6": {
+        "value": "0",
+        "formula": "0",
+        "computed": "0"
+      },
+      "H6": {
+        "value": "1200.5",
+        "formula": "1200.5",
+        "computed": "1200.5"
+      },
+      "A8": {
+        "value": "4",
+        "formula": "4",
+        "computed": "4",
+        "bold": true
+      },
+      "B8": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B9": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C9": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D9": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E9": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F9": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G9": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H9": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I9": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A11": {
+        "value": "3",
+        "formula": "3",
+        "computed": "3",
+        "bold": true
+      },
+      "B11": {
+        "value": "Semielaborado : SF 3",
+        "formula": "Semielaborado : SF 3",
+        "computed": "Semielaborado : SF 3",
+        "bold": true,
+        "textColor": "#7c3aed"
+      },
+      "B12": {
+        "value": "Item",
+        "formula": "Item",
+        "computed": "Item",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "C12": {
+        "value": "Descripción",
+        "formula": "Descripción",
+        "computed": "Descripción",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "D12": {
+        "value": "Cantidad",
+        "formula": "Cantidad",
+        "computed": "Cantidad",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "E12": {
+        "value": "U.M.",
+        "formula": "U.M.",
+        "computed": "U.M.",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "F12": {
+        "value": "Referencia",
+        "formula": "Referencia",
+        "computed": "Referencia",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "G12": {
+        "value": "Costo promedio",
+        "formula": "Costo promedio",
+        "computed": "Costo promedio",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "H12": {
+        "value": "Último costo",
+        "formula": "Último costo",
+        "computed": "Último costo",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "I12": {
+        "value": "Observación",
+        "formula": "Observación",
+        "computed": "Observación",
+        "bold": true,
+        "backgroundColor": "#dbeafe"
+      },
+      "A13": {
+        "value": "▶",
+        "formula": "▶",
+        "computed": "▶",
+        "bomToggleNodeId": 10,
+        "backgroundColor": "#fed7aa"
+      },
+      "B13": {
+        "value": "SF1",
+        "formula": "SF1",
+        "computed": "SF1",
+        "backgroundColor": "#fed7aa"
+      },
+      "C13": {
+        "value": "Semielaborado : SF 1",
+        "formula": "Semielaborado : SF 1",
+        "computed": "Semielaborado : SF 1",
+        "backgroundColor": "#fed7aa"
+      },
+      "D13": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E13": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      },
+      "A14": {
+        "value": "▶",
+        "formula": "▶",
+        "computed": "▶",
+        "bomToggleNodeId": 40,
+        "backgroundColor": "#fed7aa"
+      },
+      "B14": {
+        "value": "SF4",
+        "formula": "SF4",
+        "computed": "SF4",
+        "backgroundColor": "#fed7aa"
+      },
+      "C14": {
+        "value": "Semielaborado : SF 4",
+        "formula": "Semielaborado : SF 4",
+        "computed": "Semielaborado : SF 4",
+        "backgroundColor": "#fed7aa"
+      },
+      "D14": {
+        "value": "1",
+        "formula": "1",
+        "computed": "1",
+        "backgroundColor": "#fed7aa"
+      },
+      "E14": {
+        "value": "UND",
+        "formula": "UND",
+        "computed": "UND",
+        "backgroundColor": "#fed7aa"
+      }
+    }
+  }
+}

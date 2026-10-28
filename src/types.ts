@@ -122,6 +122,20 @@ export interface ItemCatalogTable {
   umColumnOffset: number;
 }
 
+/**
+ * Región que el diseñador no puede modificar.
+ *
+ * Restringe a quien usa la plantilla, no a quien la escribe: en el editor de
+ * plantillas estas celdas se editan como cualquier otra. Se declara por
+ * rangos, igual que las demás regiones, porque así se piensa una tabla de
+ * referencia o un bloque de cálculo.
+ */
+export interface ReadOnlyZone {
+  id: string;
+  startCell: string;
+  endCell: string;
+}
+
 export interface MergedCell {
   startCell: string;
   endCell: string;
@@ -136,6 +150,16 @@ export interface MergedCell {
  * (`userHiddenRows`, `hiddenCells`): eso es estado de quien usa la plantilla,
  * no de la plantilla. Hoy se persiste, siempre vacío, y no significa nada.
  */
+/**
+ * Marca la hoja como la lista de materiales base de la plantilla, generada a
+ * partir de esta estructura BOM. Como mucho una hoja por plantilla.
+ */
+export interface BomSheetMarker {
+  structureId: number;
+  structureCode: string;
+  structureName: string;
+}
+
 export interface SheetStyles {
   /** Ancho por índice de columna, empezando en 0. */
   columnWidths: Record<number, number>;
@@ -150,6 +174,9 @@ export interface SheetStyles {
   namedRanges: NamedRange[];
   semiFinishedZones: SemiFinishedZone[];
   itemCatalogTables: ItemCatalogTable[];
+  readOnlyZones: ReadOnlyZone[];
+  /** Solo en la hoja de lista de materiales; ausente en las demás. */
+  billOfMaterials?: BomSheetMarker;
 }
 
 /**
@@ -215,4 +242,5 @@ export const emptySheetStyles = (): SheetStyles => ({
   namedRanges: [],
   semiFinishedZones: [],
   itemCatalogTables: [],
+  readOnlyZones: [],
 });

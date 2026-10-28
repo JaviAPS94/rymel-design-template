@@ -166,6 +166,10 @@ const readStyles = (styles: PersistedSheetStyles | null | undefined): SheetStyle
       ...table,
       ...(table.tags === undefined ? {} : { tags: [...table.tags] }),
     })),
+    // Posterior a la v2.0.0: lo guardado antes no lo trae, y no protege nada.
+    readOnlyZones: (source.readOnlyZones ?? []).map((zone) => ({ ...zone })),
+    // Posterior a la v2.3.0: solo la hoja de lista de materiales la lleva.
+    ...(source.billOfMaterials ? { billOfMaterials: { ...source.billOfMaterials } } : {}),
   };
 };
 
@@ -279,6 +283,8 @@ const writeStyles = (styles: SheetStyles): PersistedSheetStyles => ({
     ...table,
     ...(table.tags === undefined ? {} : { tags: [...table.tags] }),
   })),
+  readOnlyZones: styles.readOnlyZones.map((zone) => ({ ...zone })),
+  ...(styles.billOfMaterials ? { billOfMaterials: { ...styles.billOfMaterials } } : {}),
 });
 
 /** Lleva una hoja canónica a la forma que se guarda, descartando lo vacío. */

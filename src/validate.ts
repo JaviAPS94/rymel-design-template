@@ -15,8 +15,10 @@
 import { analyzeSheet, columnLabelToIndex, parseCellRef } from "@rymel/formula-engine";
 import { toEngineBook } from "./book.js";
 import { isGraphicContent, parseGraphicDirective } from "./graphic.js";
+import { isReadOnly } from "./readOnly.js";
 import type { TemplateDiagnostic } from "./diagnostics.js";
 import type {
+  CellItemLink,
   ItemCatalogTable,
   SemiFinishedZone,
   TemplateDocument,
@@ -61,6 +63,20 @@ const positionOf = (ref: string): Position | null => {
   if (parsed === null) return null;
   return { row: parsed.row, column: parsed.col };
 };
+
+/** Etiqueta de columna de un índice (`0` → `A`). */
+const columnLabel = (column: number): string => {
+  let label = "";
+  let rest = column + 1;
+  while (rest > 0) {
+    const remainder = (rest - 1) % 26;
+    label = String.fromCharCode(65 + remainder) + label;
+    rest = Math.floor((rest - 1) / 26);
+  }
+  return label;
+};
+
+const refOf = (row: number, column: number): string => `${columnLabel(column)}${row + 1}`;
 
 const withinGrid = (position: Position): boolean =>
   position.row >= 0 &&
@@ -229,6 +245,67 @@ const checkCatalogTables = (
   }
 };
 
+/**
+ * Identificadores de los ítems de una tabla de catálogo, leídos del contenido
+ * de su columna de identificador en las filas de datos.
+ *
+ * Devuelve `null` si alguna de esas celdas es una fórmula: el análisis es
+ * estático, no evalúa, y declarar inexistente un ítem cuyo identificador se
+ * calcula sería un falso positivo que bloquearía la publicación.
+ */
+const catalogItemIds = (
+  sheet: TemplateSheet,
+  table: ItemCatalogTable,
+): Set<string> | null => {
+  const rect = rectOf(table.startCell, table.endCell);
+  if (rect === null) return new Set();
+
+  const column = rect.left + table.idColumnOffset;
+  const ids = new Set<string>();
+  for (let row = rect.top + table.headerRows; row <= rect.bottom; row++) {
+    const content = sheet.cells[refOf(row, column)]?.content.trim() ?? "";
+    if (content === "") continue;
+    if (content.startsWith("=") && !isGraphicContent(content)) return null;
+    ids.add(content);
+  }
+  return ids;
+};
+
+/** Un vínculo a ítem sirve al BOM solo si el ítem existe en su tabla. */
+const checkLinkedItem = (
+  template: TemplateDocument,
+  sheetName: string,
+  ref: string,
+  link: CellItemLink,
+  diagnostics: TemplateDiagnostic[],
+): void => {
+  const catalogSheet = template.sheets.find((other) => other.name === link.catalogSheetName);
+  const table = catalogSheet?.styles.itemCatalogTables.find(
+    (candidate) => candidate.id === link.catalogTableId,
+  );
+  if (catalogSheet === undefined || table === undefined) return;
+
+  const itemId = link.itemId.trim();
+  if (itemId === "") {
+    diagnostics.push({
+      sheet: sheetName,
+      cell: ref,
+      code: "missing-catalog-item",
+      message: `La celda apunta a la tabla "${table.name}" sin elegir ningún ítem`,
+    });
+    return;
+  }
+
+  const ids = catalogItemIds(catalogSheet, table);
+  if (ids === null || ids.has(itemId)) return;
+  diagnostics.push({
+    sheet: sheetName,
+    cell: ref,
+    code: "missing-catalog-item",
+    message: `El ítem "${itemId}" no está entre las filas de la tabla "${table.name}"`,
+  });
+};
+
 const checkCells = (
   template: TemplateDocument,
   sheet: TemplateSheet,
@@ -298,8 +375,94 @@ const checkCells = (
           code: "missing-catalog-table",
           message: `La celda apunta a la tabla de catálogo "${cell.itemLink.catalogTableId}", que no existe en "${cell.itemLink.catalogSheetName}"`,
         });
+      } else {
+        checkLinkedItem(template, sheet.name, ref, cell.itemLink, diagnostics);
       }
     }
+  }
+};
+
+/**
+ * Una sola celda MO y una sola MD en toda la plantilla.
+ *
+ * El código de diseño toma el valor de la primera celda etiquetada que
+ * encuentra, así que con dos el código depende del orden en que se recorran
+ * las hojas. Hasta ahora solo lo impedía la interfaz del diseñador.
+ */
+const checkMaterialTags = (
+  template: TemplateDocument,
+  diagnostics: TemplateDiagnostic[],
+): void => {
+  const tagged = new Map<string, { sheet: string; cell: string }[]>();
+  for (const sheet of template.sheets) {
+    for (const [ref, cell] of Object.entries(sheet.cells)) {
+      if (cell.materialTag === undefined) continue;
+      const list = tagged.get(cell.materialTag) ?? [];
+      list.push({ sheet: sheet.name, cell: ref });
+      tagged.set(cell.materialTag, list);
+    }
+  }
+
+  for (const [tag, cells] of tagged) {
+    if (cells.length < 2) continue;
+    for (const current of cells) {
+      const others = cells
+        .filter((other) => other !== current)
+        .map((other) => `${other.sheet}!${other.cell}`);
+      diagnostics.push({
+        sheet: current.sheet,
+        cell: current.cell,
+        code: "duplicate-material-tag",
+        message: `La etiqueta ${tag} está también en ${others.join(", ")}: el código de diseño solo puede salir de una celda`,
+      });
+    }
+  }
+};
+
+/**
+ * Como mucho una hoja de lista de materiales: la base es una, y el diseño la
+ * toma por su marca.
+ */
+const checkBomSheets = (template: TemplateDocument, diagnostics: TemplateDiagnostic[]): void => {
+  const marked = template.sheets.filter((sheet) => sheet.styles.billOfMaterials !== undefined);
+  if (marked.length < 2) return;
+  for (const sheet of marked) {
+    const others = marked.filter((other) => other !== sheet).map((other) => other.name);
+    diagnostics.push({
+      sheet: sheet.name,
+      code: "duplicate-bom-sheet",
+      message: `También es lista de materiales ${others.join(", ")}: la plantilla solo puede tener una`,
+    });
+  }
+};
+
+/**
+ * Zonas de solo lectura dentro de la hoja, y sin desplegables dentro: una
+ * lista de opciones protegida ofrece una elección que el diseñador no puede
+ * hacer. Pueden solaparse; proteger dos veces una celda no es ambiguo.
+ */
+const checkReadOnlyZones = (
+  sheet: TemplateSheet,
+  diagnostics: TemplateDiagnostic[],
+): void => {
+  for (const zone of sheet.styles.readOnlyZones) {
+    checkRegionBounds(
+      sheet,
+      zone,
+      `La zona de solo lectura ${zone.startCell}:${zone.endCell}`,
+      diagnostics,
+    );
+  }
+
+  for (const [ref, cell] of Object.entries(sheet.cells)) {
+    if (cell.options === undefined || cell.options.length === 0) continue;
+    if (!isReadOnly(sheet.styles, ref)) continue;
+    diagnostics.push({
+      sheet: sheet.name,
+      cell: ref,
+      code: "read-only-input",
+      message: `${ref} ofrece una lista desplegable dentro de una zona de solo lectura: el diseñador no podrá elegir`,
+    });
   }
 };
 
@@ -416,8 +579,12 @@ export const validateTemplate = (
     checkNamedRanges(sheet, diagnostics);
     checkSemiFinishedZones(sheet, diagnostics);
     checkCatalogTables(sheet, diagnostics);
+    checkReadOnlyZones(sheet, diagnostics);
     checkCells(template, sheet, diagnostics);
   }
+
+  checkMaterialTags(template, diagnostics);
+  checkBomSheets(template, diagnostics);
 
   checkFormulas(template, options, diagnostics);
 
