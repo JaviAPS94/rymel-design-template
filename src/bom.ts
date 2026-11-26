@@ -47,11 +47,41 @@ export interface BomSourceSheet {
   itemCatalogTables?: BomItemCatalogTable[];
 }
 
+/** Una familia de fantasmas colgada del semielaborado en la estructura. */
+export interface BomPhantomFamily {
+  id: number;
+  family: { id: number; name: string };
+  process: { id: number; name: string };
+}
+
 export interface BomStructureNode {
   id: number;
   semiFinished: { id: number; name: string; code: string };
   children: BomStructureNode[];
+  /** Familias de fantasmas del semielaborado; el fantasma concreto se elige en el diseño. */
+  phantomFamilies?: BomPhantomFamily[];
 }
+
+/** Estilo de la fila de una familia de fantasmas, el violeta del árbol del admin. */
+export const BOM_PHANTOM_FAMILY_STYLE = { backgroundColor: "#ede9fe" } as const;
+export const BOM_PHANTOM_PENDING_NOTE = "Fantasma por elegir";
+
+/**
+ * Las filas de las familias de fantasmas de un nodo: una por familia, como un
+ * semielaborado hijo (1 UND), con su proceso y el aviso de que falta elegir
+ * el fantasma.
+ */
+export const bomPhantomFamilyRows = (node: Pick<BomStructureNode, "phantomFamilies">): BomSummaryRow[] =>
+  (node.phantomFamilies ?? []).map((link) => ({
+    itemId: link.family.name,
+    description: `Fantasma : ${link.process.name}`,
+    cantidad: "1",
+    um: "UND",
+    reference: "",
+    averageCost: "",
+    lastCost: "",
+    note: BOM_PHANTOM_PENDING_NOTE,
+  }));
 
 /** La estructura BOM del ERP: solo su árbol. */
 export interface BomStructure {
@@ -395,7 +425,7 @@ export const buildBomSummaryCells = (
       row++;
 
       if (isExpanded) {
-        [...collectItemRows(childSf.id), ...collectAccessoryRows(childSf.id)].forEach((r) => {
+        [...bomPhantomFamilyRows(child), ...collectItemRows(childSf.id), ...collectAccessoryRows(childSf.id)].forEach((r) => {
           cells[`B${row + 1}`] = cell(r.itemId, childExpandedItemStyle);
           cells[`C${row + 1}`] = cell(r.description, childExpandedItemStyle);
           cells[`D${row + 1}`] = cell(r.cantidad, childExpandedItemStyle);
@@ -404,6 +434,16 @@ export const buildBomSummaryCells = (
           row++;
         });
       }
+    });
+
+    // Las familias de fantasmas del nodo, como sus hijos: después de ellos
+    bomPhantomFamilyRows(node).forEach((r) => {
+      cells[`B${row + 1}`] = cell(r.itemId, BOM_PHANTOM_FAMILY_STYLE);
+      cells[`C${row + 1}`] = cell(r.description, BOM_PHANTOM_FAMILY_STYLE);
+      cells[`D${row + 1}`] = cell(r.cantidad, BOM_PHANTOM_FAMILY_STYLE);
+      cells[`E${row + 1}`] = cell(r.um, BOM_PHANTOM_FAMILY_STYLE);
+      writeErpFields(r, BOM_PHANTOM_FAMILY_STYLE);
+      row++;
     });
 
     // Regular item rows of this node (from spreadsheet zones + element accessories)

@@ -14,8 +14,10 @@
 import { columnIndexToLabel, evaluateSheet, parseCellRef } from "@rymel/formula-engine";
 import { emptySheetStyles, type CellFormat, type TemplateCell, type TemplateSheet } from "./types.js";
 import {
+  BOM_PHANTOM_FAMILY_STYLE,
   BOM_SUMMARY_COLUMN_WIDTHS,
   bomAccessoryRows,
+  bomPhantomFamilyRows,
   type BomElement,
   type BomStructure,
   type BomStructureNode,
@@ -113,6 +115,7 @@ const TITLE: CellFormat = { bold: true, textColor: "#7c3aed" };
 const HEADER: CellFormat = { bold: true, backgroundColor: "#dbeafe" };
 const CHILD: CellFormat = { backgroundColor: "#fed7aa" };
 const CHILD_ITEM: CellFormat = { backgroundColor: "#fff7ed" };
+const PHANTOM: CellFormat = { ...BOM_PHANTOM_FAMILY_STYLE };
 
 /**
  * Genera la hoja base: por cada semielaborado de la estructura, de hojas a
@@ -135,6 +138,17 @@ export const buildBomBaseSheet = (
       set(row, index + 1, content, format),
     );
   };
+  // Una familia de fantasmas: fila fija, el fantasma concreto se elige en el diseño
+  const writeFamilies = (row: number, node: BomStructureNode, format: CellFormat): number => {
+    for (const family of bomPhantomFamilyRows(node)) {
+      [family.itemId, family.description, family.cantidad, family.um].forEach((content, index) =>
+        set(row, index + 1, content, format),
+      );
+      set(row, 8, family.note, format);
+      row++;
+    }
+    return row;
+  };
 
   let row = 0;
   for (const node of leavesFirst(structure.nodes)) {
@@ -150,8 +164,10 @@ export const buildBomBaseSheet = (
       set(row, 3, "1", CHILD);
       set(row, 4, "UND", CHILD);
       row++;
+      row = writeFamilies(row, child, PHANTOM);
       for (const item of templateItems(sheets, child.semiFinished.id)) writeItem(row++, item, CHILD_ITEM);
     }
+    row = writeFamilies(row, node, PHANTOM);
     for (const item of templateItems(sheets, node.semiFinished.id)) writeItem(row++, item);
     row++;
   }
